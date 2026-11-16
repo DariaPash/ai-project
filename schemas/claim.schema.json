@@ -1,0 +1,5 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:claim","type":"object","additionalProperties":false,
+ "required":["text","type","status","origin","evidence","counterevidence","limitations","basis_refs"],
+ "properties":{"text":{"type":"string","minLength":1},"type":{"enum":["fact","hypothesis","forecast","interpretation"]},"status":{"enum":["supported","disputed","unverified","stale","retracted"]},"origin":{"$ref":"urn:strategist:common#/$defs/origin"},"evidence":{"type":"array","items":{"$ref":"urn:strategist:common#/$defs/evidence"}},"counterevidence":{"type":"array","items":{"$ref":"urn:strategist:common#/$defs/evidence"}},"limitations":{"type":"array","items":{"type":"string"}},"basis_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"support_scope":{"enum":["technical_fixture","real_world"]},"support_review":{"type":"string","minLength":1}}
+}

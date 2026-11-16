@@ -1,0 +1,8 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:mcp-request",
+ "$defs":{
+  "intent":{"type":"object","additionalProperties":false,"required":["type","operation","fingerprint","external_identity","root","runtime_digest","input_sha256"],"properties":{"type":{"const":"mcp_intent_v1"},"operation":{"enum":["probe","call"]},"fingerprint":{"$ref":"urn:strategist:common#/$defs/hash"},"external_identity":{"$ref":"urn:strategist:common#/$defs/hash"},"root":{"type":"string","minLength":1},"runtime_digest":{"$ref":"urn:strategist:common#/$defs/hash"},"input_sha256":{"anyOf":[{"$ref":"urn:strategist:common#/$defs/hash"},{"type":"null"}]}}},
+  "probe":{"type":"object","additionalProperties":false,"required":["root"],"properties":{"root":{"type":"string","minLength":1}}},
+  "call":{"type":"object","additionalProperties":false,"required":["root","probe_ref","tool","path","ingest"],"properties":{"root":{"type":"string","minLength":1},"probe_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"tool":{"enum":["read_text_file","read_file"]},"path":{"type":"string","minLength":1},"ingest":{"$ref":"urn:strategist:ingest-spec"}}}
+ }
+}

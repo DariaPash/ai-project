@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "network_default": "deny",
+  "allowed_domains": [],
+  "input_roots": ["cases/<current-case>/input", "cases/<current-case>/requests", "tests/fixtures/core", "tests/fixtures/sources", "tests/fixtures/quantitative", "tests/fixtures/research", "tests/fixtures/media", "tests/specs"],
+  "max_input_bytes": 8388608,
+  "execute_source_instructions": false,
+  "external_transfer_default": "deny",
+  "publication_default": "deny"
+}

@@ -1,0 +1,18 @@
+# Resolved with CPython 3.14.8 on macOS arm64; parsing additions in step 02.
+attrs==26.1.0
+iniconfig==2.3.1
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.2.0
+referencing==0.37.0
+rpds-py==2026.9.1
+setuptools==84.2.1
+beautifulsoup4==4.15.0
+et_xmlfile==2.0.0
+openpyxl==3.1.5
+pypdf==7.1.0
+soupsieve==4.1
+typing_extensions==4.16.0

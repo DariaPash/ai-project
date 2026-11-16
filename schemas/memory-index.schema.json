@@ -1,0 +1,5 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:memory-index","type":"object","additionalProperties":false,
+ "required":["contract_version","artifact_ref","corpus_fingerprint","model","dimension","chunk_count","indexed_snapshot_revision","basis_refs"],
+ "properties":{"contract_version":{"const":6},"artifact_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"corpus_fingerprint":{"$ref":"urn:strategist:common#/$defs/hash"},"model":{"type":"string","minLength":1},"dimension":{"type":"integer","minimum":1,"maximum":4096},"chunk_count":{"type":"integer","minimum":1,"maximum":128},"indexed_snapshot_revision":{"type":"integer","minimum":0},"basis_refs":{"$ref":"urn:strategist:common#/$defs/refs"}}
+}

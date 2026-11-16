@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidence-product-strategist"
+version = "0.1.0"
+description = "File-based evidence contracts and deterministic tools for an IDE strategist"
+requires-python = ">=3.11"
+dependencies = ["jsonschema==4.26.0", "pypdf==7.1.0", "openpyxl==3.1.5", "beautifulsoup4==4.15.0"]
+
+[tool.setuptools]
+packages = ["tools", "tools.adapters", "schemas", "hooks"]
+
+[tool.setuptools.package-data]
+schemas = ["*.json"]
+"tools.adapters" = ["*.swift"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120

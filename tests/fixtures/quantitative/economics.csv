@@ -1,0 +1,7 @@
+name,value,currency,period
+payers,100,RUB,month
+price,1000,RUB,month
+variable_cost,200,RUB,month
+fixed_cost,50000,RUB,month
+investment,60000,RUB,one_time
+incremental_net,10000,RUB,month

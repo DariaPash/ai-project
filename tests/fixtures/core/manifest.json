@@ -1,0 +1,7 @@
+{
+  "schema_version":1,"origin":"synthetic_fixture","as_of":"2026-11-08T00:00:00Z","generator":"Hand-authored before core regression runs","rights":{"processing":true,"external_transfer":false,"publication":"requires release review"},
+  "files":["brief.json","action.json","missing-ref.json","injection.txt","oracle.json"],
+  "coverage":["S01","S02","S04","S07","S09","S10","S12","S15","S17","S18"],
+  "oracle":"oracle.json","hashes":"Frozen separately in planning/evidence/01 before first test run; content changes invalidate that evidence",
+  "limitations":"No market research, real approval, independent model reviewer, new agent session, network or provider failure is proven by these fixtures"
+}

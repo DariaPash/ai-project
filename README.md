@@ -1,62 +1,91 @@
-# Стратег с проверяемыми основаниями
+# Стратег с проверяемыми основаниями — v4
 
-Учебный проект MGIMO AI Challenge: переносимая папка IDE-агента, а не автономное приложение.
-LLM среды выбирает действия; Python CLI проверяет и сохраняет источники, расчёты,
-ссылки, стратегии и журнал. Данные демонстрационного кейса **синтетические**.
+Переносимая папка IDE-агента: LLM исследует и предлагает, Python CLI извлекает,
+считает, проверяет ссылки и сохраняет историю. Не автономное приложение.
 
-## Материалы v3
+## Материалы v4
 
-- [Видео: настоящая CLI-сессия](submission/v3/cli-demo.mp4?raw=true) — 3:03, H.264,
-  1600×1000, без слайдов и звука. PTY-запись, не запись рабочего стола.
-- [Описание с 8 скриншотами](submission/v3/description-final.pdf).
-- [Исходники агента](submission/v3/source-kit-v3.zip).
-- [Полный локальный демокомплект](submission/v3/local-demo-kit-v3.zip) — исходники,
-  читаемые стратегии, эксперимент, сохранённый учебный кейс, видео/PDF/PTY replay.
+- [Полный комплект с учебным кейсом](https://github.com/DariaPash/ai-project/releases/download/demo-v4/local-demo-kit-v4.zip)
+- [Исходники и технические fixtures](https://github.com/DariaPash/ai-project/releases/download/demo-v4/source-kit-v4.zip)
+- [Видео, 5:04](https://github.com/DariaPash/ai-project/releases/download/demo-v4/cli-demo.mp4)
+- [PDF: 34 страницы, 8 скриншотов](https://github.com/DariaPash/ai-project/releases/download/demo-v4/description-final.pdf)
+- [Релиз demo-v4](https://github.com/DariaPash/ai-project/releases/tag/demo-v4)
 
-Показаны запрос и план, источники/расчёты, четыре механизма
-(`status_quo`, `improve`, `refocus`, `close`), обе стратегии, review/эксперимент,
-impact/agenda и checkpoint/resume. Сохранённые стратегии не выдаются за новую
-генерацию, прошлые model calls обозначены как исторические.
+Те же четыре файла находятся в [`submission/v4/`](submission/v4/).
+Хеши — [`submission/v4/release-manifest-v4.json`](submission/v4/release-manifest-v4.json).
+Исходники доступны непосредственно в корне; читаемые результаты — в
+[`demo/readable-case/`](demo/readable-case/).
 
-Реально использованы локальные whisper.cpp STT, официальный файловый MCP,
-OpenCode/ChatGPT model task, локальная 512d hybrid memory. В установленном Codex
-выполнено одно текстовое продолжение того же кейса на том же компьютере.
+Видео — настоящая PTY-запись, не запись рабочего стола: 13 команд, новый отдельный
+контекст создаёт две стратегии, Store сохраняет предложения, новый процесс читает
+checkpoint. Исторические STT/MCP/Codex-трассы явно отделены от нового выполнения.
+Старый одноразовый Codex grant повторно не использовался.
 
-## Запуск и ограничения
+## Быстрый старт исходников
 
-Распакуйте `source-kit-v3.zip`, откройте `project/`. Python ≥3.11, локальная POSIX FS:
+Проверенная среда: CPython 3.14.8, macOS arm64, локальная POSIX filesystem.
+Заявленная база Python ≥3.11 не означает приёмку всех версий и ОС.
+Не переиспользуйте существующее пользовательское окружение.
 
 ```sh
 python3 -m venv .venv-dev
-.venv-dev/bin/python -m pip install -e .
+.venv-dev/bin/python -m pip install -r requirements.txt
+.venv-dev/bin/python -m pip install --no-build-isolation -e .
 .venv-dev/bin/python -m tools.cli doctor
+.venv-dev/bin/python -m tools.cli init --case test-quickstart --namespace test
+.venv-dev/bin/python -m tools.cli status --case test-quickstart
 ```
 
-Существующее окружение не перезаписывать. Credentials, environments, кабинет,
-личные данные профиля и model binaries в комплект не входят. Интеграции требуют
-разрешённого локального runtime и собственного входа в клиент.
+Создавайте `.venv-dev` и кейс только при их отсутствии. Установка требует
+разрешённой сети; `doctor` не скачивает пакеты и не вызывает модели.
+Интеграции подключаются отдельно: [`integrations/bootstrap.md`](integrations/bootstrap.md).
+Credentials, пользовательские окружения и machine capabilities не публикуются.
 
-В полном ZIP читать `START_HERE.md` и `readable-case/`. Backup сохраняет namespace,
-refs и историю. **Ограничение:** restricted CLI-import по историческому APR привязан
-к исходному trusted Store и выбранной локальной папке; перенос на иной компьютер
-не объявляется автоматически принятым. Публикация точных файлов отдельно разрешена
-владельцем; она не переписывает исторические права внутри старого backup.
+## Восстановление учебного кейса
 
-Business reconsideration остаётся pending. Реальные спрос, baseline, эффект и H
-не доказаны; fixture approval — не решение реального пользователя. STT без
-проверки критических слов прослушиванием. Полная F01–F15 acceptance и сравнительный
-benchmark не выполнены: новые tests/benchmarks отменены владельцем.
+Скачайте полный комплект, распакуйте в новую папку и откройте `START_HERE.md`.
+Команды выполняются из вложенного `project/`, не из исходной машины автора.
+Проверенный SHA-256 вложенного `input/backups/demo.zip`:
 
-API-эквивалент токенов — не фактическое списание и не точный остаток ChatGPT quota.
-У неизвестной transient usage сохранён резерв, а не нулевая стоимость.
+```text
+b2140fc740b6fd38c62f96b8937dd1617f55a821badc3ad91f15cf9ef9873a7f
+```
 
-## SHA-256 точных опубликованных файлов
+После установки зависимостей:
 
-| Файл | SHA-256 |
-|---|---|
-| `cli-demo.mp4` | `cadf82eb6afcb3a38391bcbe48dd4b91bc1db5f9780943b86c946977974460fd` |
-| `description-final.pdf` | `b6dd82833167d706385dbdf99a6aafb1c5491753d9ebc33ec57289263b02d8f4` |
-| `source-kit-v3.zip` | `5c86259859ea42cee693e0e27a4e9a39e9a15fcafab454747d6290cae843147e` |
-| `local-demo-kit-v3.zip` | `0b6c7e74f3a6e2eb7f5edc4303eaa6b1f1fb017bd2faffa62417e3611ee9a2d0` |
+```sh
+python -m tools.cli import-case --case test-core --namespace test --bundle input/backups/demo.zip --trusted-bundle-sha256 b2140fc740b6fd38c62f96b8937dd1617f55a821badc3ad91f15cf9ef9873a7f
+python -m tools.cli status --case test-core
+```
 
-Публикация материалов не является юридической отправкой работы на конкурс.
+Используйте Python созданного окружения. Digest — явное доверие только к локальной
+обработке собственной синтетики; не разрешение передавать материалы модели или
+публиковать свои производные. Исторические rights, namespace и refs сохраняются.
+Импорт не перезаписывает существующий кейс.
+
+## Что проверено и что не доказано
+
+- Общий технический прогон: **345 passed**; чистый комплект: ещё **18 passed**,
+  editable install, doctor, import, validate, checkpoint, новый процесс и генератор.
+- Свежий filesystem MCP bootstrap и настоящий initialize/list/read выполнены.
+- Независимое ревью: **acceptable_LOCAL_WITH_EXPLICIT_EXTERNAL_BLOCKERS**;
+  [отчёт](submission/v4/final-local-review-reconciled.md).
+- **Все данные учебные.** Модельные роли — не клиенты. Реальные спрос, эффект,
+  baseline и business-H не установлены; пересмотр остаётся pending.
+- Не приняты listening verification STT, другая ОС, качество русского semantic
+  retrieval и полный F01–F15 release. Сравнительный benchmark запрещён и не запускался.
+- Google Drive не подключён. GitHub-ссылка сама по себе не закрывает требование
+  задания о площадке видео. Дополнительный бриф, по сообщению владельца, пока
+  не опубликован; это не проверка организатора.
+
+## История и статус
+
+[v3](https://github.com/DariaPash/ai-project/releases/tag/demo-v3) сохранён без изменения
+байтов. Внутренние `published=false` и local-only заметки в замороженных архивах v4
+относятся к сборке **до этой публикации**; они не переписываются задним числом.
+Публичная доступность определяется GitHub и отдельной квитанцией публикации,
+а не старым build manifest. Бизнес-согласование и юридическая отправка конкурса
+этой публикацией не выполняются: юридически отправляет капитан.
+
+Подробный README состояния сборки сохранён в
+[`docs/README-build-v4.md`](docs/README-build-v4.md).

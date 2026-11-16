@@ -1,0 +1,34 @@
+{
+  "origin": "synthetic_fixture",
+  "observer_only": true,
+  "theme": "Manual verification can delay completion, not universal across the corpus",
+  "quotes": [
+    {
+      "file": "interview-1.txt",
+      "line": 3,
+      "text": "Участник: После встречи я ещё двадцать минут сверял, кто за что отвечает."
+    },
+    {
+      "file": "interview-2.txt",
+      "line": 3,
+      "text": "Участник: Я откладываю итоговое письмо, потому что вручную проверяю договорённости."
+    }
+  ],
+  "counterexample": {
+    "file": "interview-3.txt",
+    "line": 3,
+    "text": "Участник: Я сразу отправил короткий список задач, перепроверка не задержала работу."
+  },
+  "capability": {
+    "file": "capabilities.txt",
+    "line": 3,
+    "text": "Automatic export is planned, not available."
+  },
+  "defects": {
+    "guide": "leading_solution_confirmation",
+    "options": "channels_are_not_four_product_mechanisms",
+    "promise": "contradicts_planned_capability"
+  },
+  "fieldwork_conducted": false,
+  "population_prevalence": null
+}

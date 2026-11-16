@@ -1,0 +1,4 @@
+id,note
+A,"First line
+Second line"
+B,"=HYPERLINK(""https://example.invalid"")"

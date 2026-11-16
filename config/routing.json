@@ -1,0 +1,8 @@
+{
+ "schema_version":1,
+ "default":"deterministic_first",
+ "host_profile":{"mode":"manual_bridge","model_id":null,"price":null,"isolated_context_requires_receipt":true},
+ "max_escalations":1,
+ "external_API_enabled":false,
+ "note":"No leading IDE model switch, cheapest/strongest pricing or live MCP capability inferred from configuration. Unknown identity/usage stays null."
+}

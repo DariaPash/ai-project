@@ -1,0 +1,7 @@
+{
+  "schema_version":1,"case":"test-core","namespace":"test","origin":"synthetic_fixture",
+  "fixtures":"tests/fixtures/core/manifest.json","oracle":"tests/fixtures/core/oracle.json",
+  "smoke_sequence":["init","record brief","record action","checkpoint","status","validate"],
+  "crash_points":["before_prepare","after_prepare","after_commit","during_projection"],
+  "requirements":{"json_stdout":true,"no_external_calls":true,"preserve_committed_history":true,"no_fake_human_approval":true,"new_session_gate":"separate actual host evidence required"}
+}

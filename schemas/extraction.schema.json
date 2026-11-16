@@ -1,0 +1,4 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:extraction","type":"object","additionalProperties":false,"required":["source_ref","artifact_ref","source_hash","extractor","text","fragments","warnings"],
+ "properties":{"source_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"artifact_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"source_hash":{"$ref":"urn:strategist:common#/$defs/hash"},"extractor":{"type":"string","minLength":1},"text":{"type":"string"},"fragments":{"type":"array","items":{"type":"object","required":["kind","coordinates","text"],"additionalProperties":false,"properties":{"kind":{"type":"string"},"coordinates":{"type":"object"},"text":{"type":"string"}}}},"warnings":{"type":"array","items":{"type":"string"}},"tables_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"parser_fingerprint":{"$ref":"urn:strategist:common#/$defs/hash"},"coverage":{"type":"object"}}
+}

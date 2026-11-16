@@ -1,0 +1,5 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:obligation","type":"object","additionalProperties":false,
+ "required":["contract_version","action","owner","due","metric","basis_refs","dependency_refs","status","completion_refs"],
+ "properties":{"contract_version":{"const":6},"action":{"type":"string","minLength":1},"owner":{"type":"string","minLength":1},"due":{"anyOf":[{"const":"unknown"},{"type":"string","format":"date-time"}]},"metric":{"type":["string","null"]},"basis_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"dependency_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"status":{"enum":["pending","blocked","completed","cancelled"]},"completion_refs":{"$ref":"urn:strategist:common#/$defs/refs"}}
+}

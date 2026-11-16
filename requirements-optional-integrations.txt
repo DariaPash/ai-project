@@ -1,0 +1,5 @@
+# Owner-approved optional runtime. Install only in .venv-dev, not globally.
+mcp==2.3.0
+# Node server separately pinned: @modelcontextprotocol/server-filesystem@2.3.0
+# npm install --prefix .local/integrations/filesystem-mcp --ignore-scripts --no-audit --no-fund @modelcontextprotocol/server-filesystem@2.3.0
+# Existing OpenCode sign-in is used through local API; no API key or httpx required.

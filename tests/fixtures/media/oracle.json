@@ -1,0 +1,80 @@
+{
+  "origin": "synthetic_fixture",
+  "image": {
+    "dimensions": [
+      960,
+      540
+    ],
+    "visible": [
+      "STEP 1 OF 3",
+      "RETENTION 15%",
+      "EXPORT PLANNED",
+      "NOT AVAILABLE",
+      "COMPLETION UNKNOWN"
+    ],
+    "critical_number": "15%",
+    "critical_uncertainty": true,
+    "completion_observed": false,
+    "button_bbox": [
+      35,
+      350,
+      220,
+      80
+    ]
+  },
+  "scan": {
+    "physical_pages": 1,
+    "text_layer": false
+  },
+  "video": {
+    "duration_ms": 12000,
+    "sparse_ms": [
+      0,
+      4000,
+      8000,
+      11960
+    ],
+    "event_interval_ms": [
+      5200,
+      5600
+    ],
+    "dense_episode_ms": [
+      5000,
+      6000
+    ],
+    "dense_interval_ms": 100,
+    "sparse_event_seen": false,
+    "full_coverage": false
+  },
+  "audio": {
+    "fixture": "noise.wav",
+    "contains_speech": false,
+    "speech_fixture_status": "Own synthetic Albert TTS generated successfully with child network denied; STT model still unavailable",
+    "speech_intervals": [
+      {
+        "start_ms": 0,
+        "end_ms": 3013,
+        "text": "This is a synthetic technical recording.",
+        "uncertain": false,
+        "authored_text_not_stt": "This is a synthetic technical recording."
+      },
+      {
+        "start_ms": 3263,
+        "end_ms": 5644,
+        "text": "Retention is fifteen percent.",
+        "uncertain": false,
+        "authored_text_not_stt": "Retention is fifteen percent."
+      },
+      {
+        "start_ms": 5894,
+        "end_ms": 8011,
+        "text": null,
+        "uncertain": true,
+        "authored_text_not_stt": "Do not send the recording."
+      }
+    ],
+    "timecode_tolerance_ms": 500,
+    "expected": "unavailable_or_no_speech_not_a_guessed_number"
+  },
+  "limitations": "Owned artificial bitmap/video/tone, not UX behavior or field recordings; no speech recognition success claimed"
+}

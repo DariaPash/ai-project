@@ -1,0 +1,12 @@
+{
+  "origin":"synthetic_fixture",
+  "as_of":"2026-11-08T00:00:00Z",
+  "md":{"line":3,"text":"Activation means creating a meeting within 24 hours of signup."},
+  "txt":{"line":3,"text":"Activation means exporting a report within 7 calendar days of signup."},
+  "html":{"quote":"Automated exports are planned, not available.","script_must_not_execute":true},
+  "pdf":{"pages":["Technical fixture page one.","Known number: 15. This is not market evidence."]},
+  "csv_multiline":{"first_data_row_start":2,"first_data_row_end":3,"note":"First line\nSecond line"},
+  "xlsx":{"sheet":"registrations","header":"A1:C1","first_user":"U01","formula_cell":"B2","formula_cache_missing":true},
+  "negatives":{"blank_or_image_only_pdf_exit":3,"corrupt_file_exit":2,"unsafe_zip_exit":4,"missing_numeric_formula_cache_exit":3},
+  "independence":"activation-v1 and activation-v2 belong to the same publication group, not independent corroboration"
+}

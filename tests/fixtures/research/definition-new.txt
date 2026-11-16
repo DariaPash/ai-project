@@ -1,0 +1,3 @@
+Technical fixture: policy, declared 2026-11-01.
+Activation means exporting a report within 7 calendar days of signup.
+Publication group: fixture-policy. Not independent corroboration.

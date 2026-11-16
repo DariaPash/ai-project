@@ -1,0 +1,12 @@
+{
+ "schema_version":1,
+ "case_namespace":"test",
+ "origins":{"corpus":"synthetic_fixture","fixture_simulations":"model_simulation"},
+ "required_option_types":["status_quo","improve","refocus","close"],
+ "input_corpus":["interview-1.txt","interview-2.txt","interview-3.txt","definition-old.txt","definition-new.txt","capabilities.txt"],
+ "rubric":"tests/rubrics/03-semantic.md",
+ "observer_only_oracle":"tests/fixtures/research/oracle.json",
+ "expected_errors":{"missing_quote":"SCHEMA_INVALID","wrong_quote":"QUOTE_MISMATCH","missing_ref":"MISSING_REF","synthetic_real_support":"SYNTHETIC_AS_REAL","changed_decision":"DECISION_CHANGED","missing_h":"HUMAN_REQUIRED","approval_scope":"OPTION_CHOICE_REQUIRED"},
+ "known_unknowns":["Real baseline","Real consent/fieldwork","Official brief","Demo approval","Live URL permission","Human option choice and final decision"],
+ "criteria":{"timing":"before_options","scale":"0 worst to 4 best; fictional judgments not measurements","weights":{"value":0.4,"privacy":0.3,"reversibility":0.3},"sensitivity_weights":[{"value":0.2,"privacy":0.5,"reversibility":0.3},{"value":0.5,"privacy":0.2,"reversibility":0.3}]}
+}

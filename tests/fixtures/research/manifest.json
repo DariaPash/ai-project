@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "origin": "synthetic_fixture",
+  "rights": {
+    "processing": true,
+    "external_transfer": false,
+    "publication": false
+  },
+  "files": {
+    "tests/fixtures/research/bad-guide.json": "07c9afdcc8073b533788c27fcd87c6c401f20f71366d1c92a648611e029d0f7d",
+    "tests/fixtures/research/bad-options.json": "b2b3adf6419f2bedff7c5a6fc8a859f455e7ecf10cb055156ef8d95fa6b179e3",
+    "tests/fixtures/research/bad-promise.json": "64d7905cda8ed7fd520ec332ad2f7f4d69c980ad68c2649c54d05f31d4647096",
+    "tests/fixtures/research/capabilities.txt": "c217562668c5c8fe9e4b6722e33fc2f7058b62d499d808ce613c251e96fa7e6d",
+    "tests/fixtures/research/definition-new.txt": "5f30d0db7971c13105953b547c6aa820c3ac14cc3d7e2001da20d15fe30bc0cc",
+    "tests/fixtures/research/definition-old.txt": "7e269aaf6c32a32bbc3cafdfbd4b3028bae111cd18b77f368df4b7ea8930098a",
+    "tests/fixtures/research/interview-1.txt": "e8535c92ddd762265d9dcd96c973d940089c7a6d76400d4a660e7687aa591486",
+    "tests/fixtures/research/interview-2.txt": "3ceffa50697b2b94f6b9db15ba16e3b57b33b62ab983cabf15699ceec11d3233",
+    "tests/fixtures/research/interview-3.txt": "61625c1d2427cf0cac7deedc11ab6ecb7a841a31a42f7d71d1e330f5b218d50d",
+    "tests/fixtures/research/oracle.json": "f759bbab91fb379cca77f6b62c856c132708ae199c1b0bc266cf452e78c0b435",
+    "tests/specs/03-strategy.json": "29855a21ccac9d3e0b26e8aa5026cf0a0bee4e2aa2ab8890f2a594789bdc1a79",
+    "tests/rubrics/03-semantic.md": "41584aa161ce3d7118cbfb03184fac72ee7959792a4fc34a547f480203fafd8e"
+  },
+  "limitations": "Artificial anonymized text; no real interviewee or consent receipt; observer key kept out of synthesis input bundles"
+}

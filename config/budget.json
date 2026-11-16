@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "money_limit": null,
+  "currency": null,
+  "human_time_budget_minutes": null,
+  "external_calls_without_permission": 0,
+  "max_transient_retries": 2,
+  "max_escalations": 1,
+  "retry_policy_status": "proposed_upper_bounds_not_authorization",
+  "parallel_paid_cases_under_shared_budget": false,
+  "unknown_money_is_zero": false
+}

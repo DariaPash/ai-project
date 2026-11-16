@@ -1,0 +1,61 @@
+{
+  "verdict": "acceptable_LOCAL_WITH_EXPLICIT_EXTERNAL_BLOCKERS",
+  "review_type": "Same reviewer context; narrow reconciliation of prior full local review, not a new full review",
+  "basis": ["final-local-review.json", "final-local-review.md", "replay-caption-correction.json"],
+  "prior_review_preserved": true,
+  "prior_archive": {
+    "path": "submission/local-demo-kit-v4-reviewed-pre-replayfix.zip",
+    "sha256": "6d3aa56541bd2139e41f442a32023465d5f318016df677d5495b0dc31274498b",
+    "verified": true
+  },
+  "assets_sha256": {
+    "submission/local-demo-kit-v4.zip": "b89a98811805b09cd227748a537b1a750791c68015545ae6e85c46357a611e84",
+    "submission/source-kit-v4.zip": "c209400b8e10d671b96e32b47455ed2492716066671f4c62a7aacc2ad37b10cf",
+    "submission/full-story-v4/cli-demo.mp4": "5e7957114e19dc6206b7bcaf92ef4c05ee9f8d7bef16db06fb531c52dd963b0f",
+    "submission/full-story-v4/description-final.pdf": "82f54eb937241b2f4002c214dd29f35c520764bcf0ffe6db239450a83f2a3021"
+  },
+  "checks": {
+    "all_four_hashes_and_sizes_match_current_outer_manifest": true,
+    "other_three_asset_hashes_unchanged": true,
+    "old_and_new_zip_member_count": 307,
+    "added_members": [],
+    "removed_members": [],
+    "changed_members": [
+      "author-reproduction-utilities/finish-terminal.py",
+      "bundle-manifest.json",
+      "media/replay.html",
+      "media/video-manifest.json"
+    ],
+    "new_zip_crc_failure": null,
+    "inner_bundle_manifest_verified_entries": 306,
+    "inner_bundle_manifest_hash_mismatches": [],
+    "inner_bundle_manifest_unlisted_members": ["bundle-manifest.json"],
+    "both_replay_script_blocks_byte_identical": true,
+    "replay_script_block_sha256": [
+      "3fdce2407a9f7790af144adf1f9c9f1a21efb7222d43dfabd10f8a19f541ef21",
+      "ad47650cef1bbc12661f5cd7b7fe9d3cf0314b3883b64e0de366e42913802d6c"
+    ]
+  },
+  "finding": {
+    "severity": "info",
+    "status": "corrected_by_host_verified_narrowly",
+    "locator": "local-demo-kit-v4.zip:media/replay.html line3; media/video-manifest.json:/files/replay.html; author-reproduction-utilities/finish-terminal.py near126",
+    "detail": "Prior review missed the misleading 'без сети' caption. It now discloses the new host context through the existing OpenAI connection. Replay script/frame payloads are identical. Video metadata updates the replay hash/size and records a post-capture correction; author utility updates future generation wording. No unexpected member changes or hash defects identified."
+  },
+  "changed_member_sha256": {
+    "author-reproduction-utilities/finish-terminal.py": "c8c1ec1b9984de1e1f4da7290a9e5a3e2e55b755793060d150319d3e6a3504d2",
+    "bundle-manifest.json": "b464b151cb5847137f104082539fa71cfee5906e892e206ad5158a4a54f39485",
+    "media/replay.html": "b6fd1a5b6ac56ebc9bec9a665d5a998eba7f2ff5b8342c2abc93dba150cb9e10",
+    "media/video-manifest.json": "0554fc057597dd87a52444d3a9f99f40011a12969fc208a6dbf0a1ba6c70e967"
+  },
+  "limitations": [
+    "All prior full-review limitations remain applicable; only four changed members and dependent integrity were rechecked",
+    "Node syntax exit0 is host-reported correction evidence, not rerun by reviewer",
+    "Browser runtime and author reproduction utility were not executed",
+    "No new tests, capture, generation, model tasks, network or case mutations performed by reviewer",
+    "A04/A05 remain open: Drive deferred by owner; supplemental brief unavailable per owner, not organizer-verified",
+    "No publication, submission, business-H, benchmark or full F01-F15 acceptance; listening/other-OS/real business outcomes remain unproven"
+  ],
+  "next_action": "Host records the reconciled exact-byte local verdict while preserving prior reports and external blockers.",
+  "human_required_for_publication_or_business_H": true
+}

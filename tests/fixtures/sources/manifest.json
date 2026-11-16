@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "origin": "synthetic_fixture",
+  "as_of": "2026-11-08T00:00:00Z",
+  "generator": "tests/build_step02_fixtures.py",
+  "generator_sha256": "21873bdcb3b005a1f23b460fe40a465500e751f2e8fa9752b4db89591f688bef",
+  "rights": {
+    "processing": true,
+    "external_transfer": false,
+    "publication": false
+  },
+  "files": {
+    "activation-v1.md": "7ce9b159153e56d00efa1e935994c8dc4eeb5da98e6b61d5e575a51af5522e15",
+    "activation-v2.txt": "946e091f4892fef00c39497877e96cb249c027207b0a2662177abbe5278df70b",
+    "corrupt.pdf": "b10ea60f1ed4b46ff0107cc855e24769d9a24ea8f9c2c34ccee5a52ef60c417c",
+    "corrupt.xlsx": "ac0217eaf6a61497c7b2a8c20b8fcd13dc888f00453dd479ae7d8fc3781287cf",
+    "document.pdf": "0843c0b0db50985ebc84bada9b108e8e1e5faf2a9d4b2e0ceaa9a395e6138d9d",
+    "image-only.pdf": "c4d9058f6c991034a308b3aaed4d0b5300c4ecd029484ab86aab3e1765d61fe3",
+    "multiline.csv": "3a1298754b1c24cbffbaee8485931b7d9090d3e52bc4404ad043c8de7d5ee6bc",
+    "oracle.json": "91f2341bf805501a3965d1f567ac51e30e995fa7c31aadb48c7f0929eddc5576",
+    "page.html": "a8840765e717e5e66f1cbffdf9cf2efea3191d8cbe7291a28ec35543114d0486",
+    "tables.xlsx": "3c50c579a9e25d58d1452e3e680bbac45571e01a91292d9368ef8e27ba16f205"
+  },
+  "oracle": "oracle.json",
+  "limitations": "Artificial technical corpus; no market claims or measured business baseline"
+}

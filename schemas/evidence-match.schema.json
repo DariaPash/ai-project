@@ -1,0 +1,5 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:evidence-match","type":"object","additionalProperties":false,
+ "required":["contract_version","source_ref","claim_refs","relation","evidence","rationale","limitations"],
+ "properties":{"contract_version":{"const":6},"source_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"claim_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"relation":{"enum":["supports","contradicts","changes_scope","unrelated"]},"evidence":{"type":"array","minItems":1,"items":{"$ref":"urn:strategist:common#/$defs/evidence"}},"rationale":{"type":"string","minLength":1},"limitations":{"type":"array","minItems":1,"items":{"type":"string"}}}
+}

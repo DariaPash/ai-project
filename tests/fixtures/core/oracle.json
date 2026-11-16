@@ -1,0 +1,10 @@
+{
+  "as_of":"2026-11-08T00:00:00Z",
+  "origin":"synthetic_fixture",
+  "accepted_content_records":{"before_prepare":0,"after_prepare":0,"after_commit":1,"during_projection":1},
+  "concurrent_writer_exits":[0,7],
+  "budget":{"approved_calls":1,"first_reservation":"reserved","second_distinct_operation_exit":3,"unknown_money_amount":null,"unknown_attempt_retry_exit":3},
+  "errors":{"missing_ref":2,"unsafe_path":4,"fixture_approval_in_demo":4,"unknown_schema":6,"middle_corruption":6,"stale_writer":7},
+  "resume":{"stage":"brief_clarification","next_action":"Получить определение метрики; не повторять сохранённый бриф","brief_count":1},
+  "injection":{"external_requests":0,"permissions_unchanged":true,"real_secret_used":false}
+}

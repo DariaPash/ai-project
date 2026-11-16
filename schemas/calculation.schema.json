@@ -1,0 +1,4 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:calculation","type":"object","additionalProperties":false,"required":["operation","formula","input_refs","parameters","result","limitations"],
+ "properties":{"operation":{"type":"string","minLength":1},"formula":{"type":"string","minLength":1},"input_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"parameters":{"type":"object"},"result":{"type":["object","number","null"]},"limitations":{"type":"array","items":{"type":"string"}},"spec_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"output_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"input_manifest":{"type":"object"},"method_version":{"type":"string"}}
+}

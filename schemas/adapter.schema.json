@@ -1,0 +1,4 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:adapter","type":"object","required":["action_id","attempt_id","input_refs","parameters","limits","permission_refs","output_schema"],"additionalProperties":false,
+ "properties":{"action_id":{"type":"string","pattern":"^ACT-[0-9]{3,}$"},"attempt_id":{"type":"string","format":"uuid"},"input_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"parameters":{"type":"object"},"limits":{"type":"object","required":["deadline_ms","max_bytes"],"properties":{"deadline_ms":{"type":"integer","minimum":1},"max_bytes":{"type":"integer","minimum":1}}},"permission_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"output_schema":{"type":"string","minLength":1}}
+}

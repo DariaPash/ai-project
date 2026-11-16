@@ -1,0 +1,4 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:artifact","type":"object","required":["sha256","size","media_type","origin","parent_refs"],"additionalProperties":false,
+ "properties":{"sha256":{"$ref":"urn:strategist:common#/$defs/hash"},"size":{"type":"integer","minimum":0},"media_type":{"type":"string","minLength":1},"origin":{"$ref":"urn:strategist:common#/$defs/origin"},"parent_refs":{"$ref":"urn:strategist:common#/$defs/refs"},"processing_kind":{"enum":["human","algorithm","LLM-assisted"]}}
+}

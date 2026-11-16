@@ -1,0 +1,10 @@
+{
+  "origin":"synthetic_fixture","as_of":"2026-11-08T00:00:00Z","timezone":"UTC","date_format":"%Y-%m-%d","retention_day":7,"retention_window":"complete_calendar_day",
+  "cohorts":{"unique_registrations":19,"duplicates_excluded":1,"mature":15,"immature_excluded":4,"d7_active":7,"rate_fraction":[7,15],"duplicate_d7_events":1,"missing_d7_ids":1,"by_cohort":{"2026-10-20":{"denominator":10,"numerator":4},"2026-10-28":{"denominator":5,"numerator":3},"2026-11-05":{"denominator":0,"numerator":0,"rate":null}}},
+  "segments":{"small":{"denominator":10,"numerator":4},"agency":{"denominator":5,"numerator":3}},
+  "funnel":{"mature_registrations":15,"activated":10,"d7_after_activation":7,"activation_fraction":[10,15],"conditional_fraction":[7,10],"first_cohort":{"mature_registrations":10,"activated":6,"d7_after_activation":4,"conditional_fraction":[4,6]}},
+  "economics":{"currency":"RUB","period":"month","revenue":"100000.00","contribution":"80000.00","net":"30000.00","break_even_customers":63,"payback_months":"6.00"},
+  "higher_variable_cost":{"revenue":"100000.00","contribution":"60000.00","net":"10000.00","break_even_customers":84},
+  "edge_cases":{"zero_denominator_rate":null,"ambiguous_date_without_format_exit":2,"missing_formula_cache_exit":3,"immature_is_not_zero":true,"correlation_is_not_causation":true},
+  "tolerance":{"rates":1e-9,"money":"exact Decimal cents","integer_counts":"exact"}
+}

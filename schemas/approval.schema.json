@@ -1,0 +1,6 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"urn:strategist:approval","type":"object","additionalProperties":false,
+ "required":["scope","targets","target_digest","question","status"],
+ "properties":{"scope":{"enum":["development_resource","source_access","data_transfer","option_choice","final_decision","reconsideration","publication"]},"targets":{"$ref":"urn:strategist:common#/$defs/refs"},"terms":{"type":"object"},"target_digest":{"$ref":"urn:strategist:common#/$defs/hash"},"question":{"type":"string","minLength":1},"status":{"enum":["requested","approve","reject","revise"]},"request_ref":{"$ref":"urn:strategist:common#/$defs/ref"},"approval_kind":{"enum":["real","fixture"]},"actor":{"type":"string","minLength":1},"channel":{"type":"string","minLength":1},"timestamp":{"type":"string","format":"date-time"},"evidence_ref":{"$ref":"urn:strategist:common#/$defs/ref"}},
+ "allOf":[{"if":{"properties":{"status":{"enum":["approve","reject","revise"]}}},"then":{"required":["request_ref","approval_kind","actor","channel","timestamp","evidence_ref"]}}]
+}

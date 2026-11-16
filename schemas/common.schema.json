@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:strategist:common",
+  "$defs": {
+    "ref": {"type":"object","required":["case_id","entity_id","revision"],"additionalProperties":false,"properties":{"case_id":{"type":"string","pattern":"^[a-z0-9][a-z0-9_-]{0,63}$"},"entity_id":{"type":"string","pattern":"^[A-Z]{3}-[0-9]{3,}$"},"revision":{"type":"integer","minimum":1}}},
+    "hash": {"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "origin": {"enum":["public_source","owner_observation","synthetic_fixture","model_simulation","unknown"]},
+    "refs": {"type":"array","items":{"$ref":"#/$defs/ref"},"uniqueItems":true},
+    "locator": {"type":"object","required":["source_revision","source_hash","extraction_id","kind","coordinates"],"additionalProperties":false,"properties":{"source_revision":{"type":"integer","minimum":1},"source_hash":{"$ref":"#/$defs/hash"},"extraction_id":{"type":"string","pattern":"^EXT-[0-9]{3,}$"},"kind":{"enum":["lines","page","cells","html","image","audio","video"]},"coordinates":{"type":"object","minProperties":1},"exact_quote":{"type":"string","minLength":1},"quote_hash":{"$ref":"#/$defs/hash"}}},
+    "evidence": {"type":"object","required":["ref","locator"],"additionalProperties":false,"properties":{"ref":{"$ref":"#/$defs/ref"},"locator":{"$ref":"#/$defs/locator"}}},
+    "usage": {"type":"object","required":["duration_ms","model","tokens","money","human_minutes","unknown_reason"],"additionalProperties":false,"properties":{"duration_ms":{"type":["number","null"],"minimum":0},"model":{"type":["string","null"]},"tokens":{"type":["integer","null"],"minimum":0},"money":{"type":"object","required":["amount","currency","basis"],"additionalProperties":false,"properties":{"amount":{"type":["number","null"],"minimum":0},"currency":{"type":["string","null"]},"basis":{"enum":["actual","estimated","unknown"]}}},"human_minutes":{"type":["number","null"],"minimum":0},"unknown_reason":{"type":["string","null"]}}}
+  }
+}

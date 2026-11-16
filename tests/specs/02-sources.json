@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "origin": "synthetic_fixture",
+  "rights": {"processing": true, "external_transfer": false, "publication": false},
+  "limits": {"max_bytes": 8388608, "max_output_bytes": 8388608, "max_rows": 2000, "max_columns": 64, "max_pages": 100, "timeout_ms": 10000, "max_zip_entries": 2000, "max_uncompressed_bytes": 16777216, "max_compression_ratio": 200},
+  "sources": [
+    {"name":"policy-v1", "file":"tests/fixtures/sources/activation-v1.md", "format":"md", "title":"Synthetic activation policy v1", "primary_publication":"fixture-activation-policy", "options":{"encoding":"utf-8"}},
+    {"name":"policy-v2", "file":"tests/fixtures/sources/activation-v2.txt", "format":"txt", "title":"Synthetic activation policy v2", "primary_publication":"fixture-activation-policy", "options":{"encoding":"utf-8"}},
+    {"name":"pdf", "file":"tests/fixtures/sources/document.pdf", "format":"pdf_text", "title":"Synthetic text PDF", "options":{}},
+    {"name":"html", "file":"tests/fixtures/sources/page.html", "format":"html_snapshot", "title":"Synthetic saved HTML", "options":{"encoding":"utf-8"}},
+    {"name":"multiline", "file":"tests/fixtures/sources/multiline.csv", "format":"csv", "title":"Synthetic multiline CSV", "options":{"encoding":"utf-8", "delimiter":",", "expected_columns":["id","note"]}},
+    {"name":"registrations", "file":"tests/fixtures/quantitative/registrations.csv", "format":"csv", "title":"Synthetic registrations", "options":{"encoding":"utf-8", "delimiter":",", "expected_columns":["user_id","signup_at","segment"]}},
+    {"name":"d7", "file":"tests/fixtures/quantitative/d7.csv", "format":"csv", "title":"Synthetic D7 events", "options":{"encoding":"utf-8", "delimiter":",", "expected_columns":["user_id","event_at"]}},
+    {"name":"activations", "file":"tests/fixtures/quantitative/activations.csv", "format":"csv", "title":"Synthetic activations", "options":{"encoding":"utf-8", "delimiter":",", "expected_columns":["user_id","event_at"]}},
+    {"name":"economics", "file":"tests/fixtures/quantitative/economics.csv", "format":"csv", "title":"Synthetic economics", "options":{"encoding":"utf-8", "delimiter":",", "expected_columns":["name","value","currency","period"]}},
+    {"name":"workbook", "file":"tests/fixtures/sources/tables.xlsx", "format":"xlsx", "title":"Synthetic quantitative workbook", "options":{"sheet":"registrations", "header_row":1}},
+    {"name":"formula", "file":"tests/fixtures/sources/tables.xlsx", "format":"xlsx", "title":"Synthetic quantitative workbook", "options":{"sheet":"formula", "header_row":1}}
+  ],
+  "oracle":"tests/fixtures/sources/oracle.json",
+  "manifest":"tests/fixtures/sources/manifest.json"
+}

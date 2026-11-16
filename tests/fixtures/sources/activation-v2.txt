@@ -1,0 +1,5 @@
+Technical activation policy — synthetic revision
+Published: 2026-11-01
+Activation means exporting a report within 7 calendar days of signup.
+Primary publication group: fixture-activation-policy.
+The definition changed. Do not combine the old and new activation rates.

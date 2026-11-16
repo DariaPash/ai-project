@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "origin": "synthetic_fixture",
+  "rights": {
+    "processing": true,
+    "external_transfer": false,
+    "publication": false
+  },
+  "files": {
+    "corrupt.png": "5464533c9647b67eb320c40ccc5959537c09102ae75388f6a7675b433e745c9d",
+    "event.mp4": "1734dfc06280e7ff053c24c5aab4e5110cb8a639e5554955cda7930bd5d4eafb",
+    "noise.wav": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+    "oracle.json": "550c6e892c94207772a3d083ba1dcb8c8bc055a403ab41b8818eaabc802eb5bc",
+    "remote.m3u8": "7fed80d5777c2952e0e999244e49812b8a19a948d2f8b935e379ee97d20bac55",
+    "scan.pdf": "0737969df56e2ad6347e72e4048d4a2224d63a1caafc78d37bfb52535bb280b1",
+    "screen.png": "7226095f850d2973f405865d5f5aad8350465c1ca3e3bb3ff950e3b558b00f71",
+    "speech-clear.wav": "a11139d34301d480107e1610ea3ba56dcc06499e663c955001fbf36476ced213",
+    "speech.wav": "e66c66a479ec51185f35064402e4ab5c0a6427d321eabd9f3a2e80dd72270f95"
+  },
+  "generator_sha256": "29cb193ea0deb3efcf6d16a34be0470274f24f432c708ebd41fb5227f8311e64",
+  "tools": {
+    "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "licenses": "Original bitmap/content; local FFmpeg GPL build and installed Apple Albert TTS on own text; no voice cloning/provider upload/publication rights asserted"
+}

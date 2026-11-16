@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "operation_version": 1,
+  "cohort_definitions":{"timezone":"UTC", "date_format":"%Y-%m-%d", "as_of":"2026-11-08T00:00:00Z", "retention_day":7, "retention_window":"complete_calendar_day", "dedup":"exact", "missing_id":"exclude", "missing_segment":"unknown", "formula_cache_policy":"reject", "activation_window_days":7},
+  "cohort_fields":{"user_id":"user_id", "signup_at":"signup_at", "segment":"segment", "event_at":"event_at"},
+  "economic_definitions":{"currency":"RUB", "period":"month", "formula_cache_policy":"reject"},
+  "economic_fields":{"name":"name", "value":"value", "currency":"currency", "period":"period"},
+  "operations":{
+    "cohorts":{},
+    "segments":{},
+    "funnel":{},
+    "economics":{},
+    "scenarios":{"scenarios":[{"name":"base", "overrides":{}}, {"name":"higher_variable_cost", "overrides":{"variable_cost":"400"}}]},
+    "sensitivity":{"parameter":"variable_cost", "values":["200","400"]}
+  },
+  "oracle":"tests/fixtures/quantitative/oracle.json",
+  "manifest":"tests/fixtures/quantitative/manifest.json"
+}
