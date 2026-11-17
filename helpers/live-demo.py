@@ -13,10 +13,11 @@ import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from tools.contracts import sha
+from tools.contracts import key, sha
 from tools.safeio import SafeRoot, canonical
 from tools.store import Store
 from tools.research_contracts import strategy_manifest
+from tools.option_scoring import scenario
 
 
 def say(text):
@@ -70,12 +71,17 @@ def main():
                 say(p["text"][:440])
             say("Конфликт CLM-001@1: создание встречи/24ч ≠ экспорт/7д; определения нельзя смешивать.")
         elif mode == "options":
+            options = [active(identity) for identity in ("OPT-001", "OPT-002", "OPT-003", "OPT-004")]
             for identity in ("OPT-001", "OPT-002", "OPT-003", "OPT-004"):
                 p = active(identity)["payload"]
                 say(identity + ": " + p["option_type"] + " / scores=" + str(p["scores"]))
-            say("Учебные weights privacy/reversibility/value = 0.3/0.3/0.4: 2.8/3.3/2.3/1.5.")
-            say("При weights 0.5/0.3/0.2 status quo обходит improve: 3.4 против 3.3.")
-            say("Не робастный бизнес-победитель; нужны наблюдение и выбор пользователя.")
+            plan = records[key(options[0]["payload"]["research_plan_ref"])]
+            criteria = plan["payload"]["criteria"]
+            for weights in [criteria["weights"], *criteria.get("sensitivity_weights", [])]:
+                totals, leaders = scenario(options, weights)
+                say("Учебные веса " + str(weights) + ": " + "; ".join(k + "=" + str(v) for k, v in totals.items()))
+                say("Лидер только при этих весах: " + ", ".join(leaders))
+            say("Показанные сценарии не доказывают спрос, устойчивость при любых весах или бизнес-выбор.")
         elif mode == "commit":
             result = json.loads((project / "demo/agent-result.json").read_text())
             if result["input_sha256"] != sha(canonical(packet)) or result["business_H_confirmed"] is not False:

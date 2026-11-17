@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-17T00:12:36.874977+00:00",
+  "actual": true,
+  "success": true,
+  "seconds": 121.399,
+  "commands_completed": 12,
+  "raw_cast_sha256": "9d6674552687e273bef0d0f5650ab347fc81a501b195a0023998c3937a4cce75",
+  "before_revision": 173,
+  "after_revision": 174,
+  "after_snapshot_digest": "1db6588d06abb91d4f3adee77496b93b15c41ebf272a81041db12f70fbfcef24",
+  "awaiting_human": "reconsideration",
+  "rendering": "Timed terminal-screen replay of actual captured bytes; no prepared output substitution",
+  "test_runs": 0,
+  "screen_capture": false,
+  "pty_recording": true
+}

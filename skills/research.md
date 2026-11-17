@@ -8,4 +8,5 @@ Output: pinned question/claim/proposal, limitations и одно следующе
 Invocation: explicit `hook run`, event=procedure, procedure_id=research, version=5,
 basis_refs. Это запись реально выполненной процедуры, не генерация содержания CLI.
 Stop: нет разрешения/источника/точной поддержки; неизвестное сохранить unknown.
-Тестовые прогоны отключены по указанию пользователя; schema validation не семантика.
+Schema validation не проверяет смысл. Технические тесты допустимы при явном
+разрешении владельца; сравнительный benchmark требует отдельного разрешения.

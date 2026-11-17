@@ -1,0 +1,49 @@
+{
+  "at": "2026-11-17T00:13:53.395131+00:00",
+  "actual": true,
+  "capture": "genuine_PTY",
+  "screen_capture": false,
+  "slides": false,
+  "speed": 1,
+  "audio": false,
+  "published": false,
+  "submitted": false,
+  "capture_receipt": "capture-receipt.json",
+  "commands_completed": 12,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1600,
+        "height": 1000
+      }
+    ],
+    "format": {
+      "duration": "121.440000"
+    }
+  },
+  "assets": {
+    "cli-demo.mp4": {
+      "sha256": "3ddbf0b6ff55acc73d67801879b1aa1eb5ea8f05c73c91140d910232371d3d5c",
+      "bytes": 5219264
+    },
+    "replay.html": {
+      "sha256": "5d9e727d416470eda623e2492c39af662dca659c8534f15bff8891ded7399230",
+      "bytes": 200192
+    },
+    "session.cast": {
+      "sha256": "9d6674552687e273bef0d0f5650ab347fc81a501b195a0023998c3937a4cce75",
+      "bytes": 17688
+    },
+    "commands.json": {
+      "sha256": "60c9e5cbcc38dbd2f0582c9d7d587e6eb4190857bca661f76ebe2c0dbb4c4178",
+      "bytes": 2093
+    }
+  },
+  "trim": "No active execution removed; idle post-recording shell cleanup omitted",
+  "browser_replay_execution_checked": false,
+  "reason": "HTML created locally; browser runtime not yet inspected"
+}

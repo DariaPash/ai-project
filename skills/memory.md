@@ -7,7 +7,13 @@ Input: committed snapshot, pinned refs/current rights. Не брать facts и�
 `retrieve --mode hybrid` соединяет lexical+cosine+graph RRF, фильтрует текущие права
 и withdrawals. Corpus change требует rebuild, checkpoint — нет. Нет модели — blocked,
 не random/hash substitute. Retrieval ranks — не supported evidence сами по себе.
+Fingerprint включает версию/размер/перекрытие chunker. Индексы до v5 после обновления
+требуют явного rebuild; lexical доступен без модели и не вызывает её скрыто.
 `retract` создаёт новую CLM revision, не удаляет историю. Новый DEC content требует H.
-Backup local-only если external_transfer=false; публикация/другая root не разрешена.
+Backup local-only если external_transfer=false; передача в другой root и публикация
+требуют отдельного точного разрешения, успешный restore его не наследует.
 Вызов процедуры явно фиксируется hook event=procedure/procedure_id=memory/version6.
-Тесты и benchmark не запускать по указанию пользователя.
+Apple English embeddings экспериментальны: качество русского перефразирования
+не принято. Для русского текста доступен явный lexical-режим (совпадения слов,
+не семантические перефразы). Технические тесты требуют разрешения владельца;
+сравнительный benchmark запрещён до отдельного согласования.

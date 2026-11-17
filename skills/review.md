@@ -10,4 +10,5 @@ raw tool response, context ID, input digest, output и exposed usage (иначе
 Output: RTE+REV с pinned targets/evidence/limitations, отдельно от business-H.
 Invocation: explicit hook procedure review/version5 с RTE/REV refs.
 Stop: нет isolated context/реального receipt — unavailable; self-review не independent.
-Не запускать тесты: пользователь отменил их. Ревью — чтение результата, не pytest.
+Ревьюер читает переданный результат и не запускает тесты/сеть. Ведущий агент может
+отдельно выполнить разрешённые технические проверки; они не заменяют независимое ревью.

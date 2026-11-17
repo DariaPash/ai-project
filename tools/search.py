@@ -8,6 +8,26 @@ from .records import RecordBatch
 from .safeio import canonical, parse_json
 
 KINDS = {"extraction", "claim", "question", "option", "strategy", "promise", "experiment", "decision", "obligation"}
+CHUNK_CHARS = 1400
+CHUNK_OVERLAP = 160
+MAX_CHUNKS = 128
+
+
+def text_chunks(documents):
+    """Cover complete documents with character offsets; fail, never silently truncate."""
+    chunks = []
+    for document in documents:
+        text = document["text"]
+        for start in range(0, len(text), CHUNK_CHARS - CHUNK_OVERLAP):
+            end = min(start + CHUNK_CHARS, len(text))
+            chunks.append({"ref": document["ref"], "start_char": start, "end_char": end, "text": text[start:end]})
+            if len(chunks) > MAX_CHUNKS:
+                raise CoreError(
+                    "INDEX_LIMIT", "Corpus exceeds128 chunks; narrow corpus explicitly; no partial results", 4
+                )
+            if end == len(text):
+                break
+    return chunks
 
 
 def corpus(snapshot, records):
@@ -21,7 +41,12 @@ def corpus(snapshot, records):
             text = canonical(p).decode()
         documents.append({"ref": ref(r), "sha256": digest(r), "text": text})
     documents.sort(key=lambda d: key(d["ref"]))
-    return documents, digest(documents)
+    return documents, digest(
+        {
+            "documents": documents,
+            "chunker": {"version": 2, "chars": CHUNK_CHARS, "overlap": CHUNK_OVERLAP, "max_chunks": MAX_CHUNKS},
+        }
+    )
 
 
 def build(store, spec, expected):
@@ -32,21 +57,7 @@ def build(store, spec, expected):
     def builder(snapshot):
         batch = RecordBatch(store, snapshot)
         documents, fingerprint = corpus(snapshot, batch.records)
-        chunks = []
-        for d in documents:
-            if not effective(snapshot, batch.records, d["ref"])["eligible"]:
-                continue
-            for offset in range(0, len(d["text"]), 1400):
-                chunks.append(
-                    {
-                        "ref": d["ref"],
-                        "start_char": offset,
-                        "end_char": min(offset + 1400, len(d["text"])),
-                        "text": d["text"][offset : offset + 1400],
-                    }
-                )
-                if len(chunks) > 128:
-                    raise CoreError("INDEX_LIMIT", "Corpus exceeds128 chunks; narrow corpus before indexing", 4)
+        chunks = text_chunks([d for d in documents if effective(snapshot, batch.records, d["ref"])["eligible"]])
         if not chunks:
             raise CoreError("INDEX_EMPTY", "No eligible text to index", 3)
         vectors = execute([c["text"] for c in chunks])
@@ -131,10 +142,7 @@ def retrieve(store, query, mode="lexical", history=False):
         vector = result["vectors"][0]
         semantic = sorted(range(len(chunks)), key=lambda i: -sum(a * b for a, b in zip(vector, chunks[i]["vector"])))
     elif mode == "lexical":
-        chunks = [
-            {"ref": d["ref"], "start_char": 0, "end_char": min(1400, len(d["text"])), "text": d["text"][:1400]}
-            for d in documents
-        ]
+        chunks = text_chunks(documents)
         semantic = []
     else:
         raise CoreError("RETRIEVE_MODE", "Choose lexical or hybrid explicitly")
@@ -181,6 +189,9 @@ def retrieve(store, query, mode="lexical", history=False):
             "corpus_fingerprint": fingerprint,
             "network_used": False,
             "semantic_vectors_used": mode == "hybrid",
+            "chunk_count": len(chunks),
+            "chunk_char_limit": CHUNK_CHARS,
+            "coordinate_system": "Unicode characters, zero-based [start_char,end_char)",
             "meaning": "Ranked local memory, not independent source support or proven answer correctness",
         },
     }

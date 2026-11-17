@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "gates": {
-    "B": {"status":"blocked","evidence":[],"reason":"Official brief published but not read; legal copy/access required","owner":"project owner"},
-    "R": {"status":"unknown","evidence":[],"reason":"Local step 01 development requested; time, paid services, budgets and product hosts unconfirmed","owner":"project owner"},
-    "D": {"status":"unknown","evidence":[],"reason":"Meeting assistant is only a proposal; use technical fixtures","owner":"project owner"},
-    "P": {"status":"scoped","evidence":["User requested local step 01 development"],"reason":"Local code and artificial core fixtures only; no external transfer/publication","owner":"rights holder"},
-    "H": {"status":"not_requested","evidence":[],"reason":"No business choice in step 01","owner":"product user"},
-    "L": {"status":"partial","evidence":[],"reason":"Only local core is being exercised; other adapters not implemented","owner":"executing agent"},
-    "S": {"status":"blocked","evidence":[],"reason":"No publication/submission authorized","owner":"captain"}
+    "B": {"status":"blocked","evidence":[],"reason":"Installation default: attach a legally obtained applicable brief and verify fit; organizer publication status is unknown here","owner":"project owner"},
+    "R": {"status":"unknown","evidence":[],"reason":"Installation default: obtain current environment, resource and cost permissions; no author grants inherited","owner":"project owner"},
+    "D": {"status":"unknown","evidence":[],"reason":"Installation default: choose the case explicitly; test-* fixtures need no business topic approval","owner":"project owner"},
+    "P": {"status":"scoped","evidence":[],"reason":"Installation default: owned local test fixtures only; source processing, transfer and publication require separate scoped rights","owner":"rights holder"},
+    "H": {"status":"not_requested","evidence":[],"reason":"Read current committed case approvals; config does not attest a business choice","owner":"product user"},
+    "L": {"status":"unknown","evidence":[],"reason":"Run doctor and authorized probes on this installation; capability receipts are not inherited","owner":"executing agent"},
+    "S": {"status":"blocked","evidence":[],"reason":"Publication needs an exact scoped approval; legal contest submission is a separate captain action","owner":"captain"}
   }
 }

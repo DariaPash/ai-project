@@ -15,7 +15,9 @@ from .helpers import PROJECT, cli, make_project
 from .step03_helpers import add_options, build_research, complete_fixture
 
 
-SPEC = importlib.util.spec_from_file_location("readable_v4", PROJECT / "submission/prepare-v4-readable.py")
+HELPERS = PROJECT / "helpers" if (PROJECT / "helpers/prepare-readable.py").exists() else PROJECT / "submission"
+SCRIPT = HELPERS / ("prepare-readable.py" if HELPERS.name == "helpers" else "prepare-v4-readable.py")
+SPEC = importlib.util.spec_from_file_location("readable_v4", SCRIPT)
 readable = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(readable)
 
@@ -153,7 +155,7 @@ def test_shipped_onboarding_brief_needs_no_development_fixtures(tmp_path):
     root = make_project(tmp_path / "project")
     case = "test-readable-start"
     cli(root, "init", "--case", case, "--namespace", "test")
-    payload = (PROJECT / "submission/v4-content/inputs/brief.json").read_bytes()
+    payload = (HELPERS / "v4-content/inputs/brief.json").read_bytes()
     relative = f"cases/{case}/input/brief.json"
     path = root / relative
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -178,7 +180,7 @@ def test_shipped_onboarding_brief_needs_no_development_fixtures(tmp_path):
 
 
 def test_translation_catalog_covers_both_strategies_and_four_mechanisms():
-    catalog = json.loads((PROJECT / "submission/v4-content/russian-catalog.json").read_text())
+    catalog = json.loads((HELPERS / "v4-content/russian-catalog.json").read_text())
     for identity in [
         "STR-001@3",
         "STR-002@3",

@@ -1,7 +1,6 @@
 """Local synthetic-only proposals from one verified Store snapshot; no mutation/network."""
 
 import argparse
-from decimal import Decimal
 import json
 import os
 from pathlib import Path
@@ -12,6 +11,7 @@ sys.path.insert(0, str(ROOT))
 from tools.contracts import digest, key, ref, references, sha
 from tools.errors import CoreError
 from tools.store import Store
+from tools.option_scoring import weighted_score
 
 TITLES = {
     "brief": "Бриф",
@@ -161,7 +161,7 @@ def compare(options, records):
                 if not all(k in scores for k in weights):
                     text += f"{key(ref(option))}: неполные оценки; итог неизвестен.\n\n"
                     continue
-                total = sum((Decimal(str(weights[k])) * Decimal(str(scores[k])) for k in weights), Decimal(0))
+                total = weighted_score(scores, weights)
                 totals.append((key(ref(option)), total))
                 text += f"- {key(ref(option))}, {LABELS.get(option['payload']['option_type'])}: **{total}**; оценки {dumps(scores)}\n"
             if totals:

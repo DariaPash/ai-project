@@ -40,9 +40,37 @@ def test_schemas_and_development_registry():
         "adapter",
     }.issubset(schemas)
     assert all(value["$schema"].endswith("2020-12/schema") for value in schemas.values())
-    from pathlib import Path
-
-    validate_schema("development-progress", json.loads(Path("planning/progress.json").read_text()))
+    # Validate the contract with self-contained data, not an author's development log.
+    step = {
+        "step_id": "01",
+        "status": "not_started",
+        "execution": "fixture",
+        "instruction_sha256": "0" * 64,
+        "base_manifest": {},
+        "prerequisites": [],
+        "completed_units": [],
+        "changed_files": [],
+        "checks": [],
+        "gates": {},
+        "blockers": [],
+        "budget_used": None,
+        "updated_at": "2026-11-17T00:00:00Z",
+        "next_action": "Run a local contract test",
+    }
+    validate_schema(
+        "development-progress",
+        {
+            "schema_version": 1,
+            "revision": 0,
+            "updated_at": "2026-11-17T00:00:00Z",
+            "active_run": "fixture",
+            "steps": {f"{i:02}": {**step, "step_id": f"{i:02}"} for i in range(1, 9)},
+            "features": {
+                f"F{i:02}": {name: {} for name in ("implementation", "offline", "live", "semantic", "acceptance")}
+                for i in range(1, 16)
+            },
+        },
+    )
 
 
 @pytest.mark.parametrize("invalid", ["../escape", "a/b", "A", "x" * 65, "test-../x", "a\\b"])
