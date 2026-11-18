@@ -1,0 +1,28 @@
+[
+  {
+    "source_ref": {
+      "case_id": "test-applied-meeting",
+      "entity_id": "SRC-001",
+      "revision": 1
+    },
+    "extraction_id": "EXT-001",
+    "url": "https://otter.ai/pricing",
+    "sha256": "7283cf4d4345059e2e698eeee374e6b0c3ce13497aae32ad3ddb3bc00565543f",
+    "retrieved_at": "2026-11-17T23:32:26.162909+00:00",
+    "origin": "public_source",
+    "raw_snapshot_publication": false
+  },
+  {
+    "source_ref": {
+      "case_id": "test-applied-meeting",
+      "entity_id": "SRC-003",
+      "revision": 1
+    },
+    "extraction_id": "EXT-003",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/intelligent-recap-calls-meetings",
+    "sha256": "7a9e91d1c570add8938c8d37c19d374d23565addb6e75c8b072744284b94069d",
+    "retrieved_at": "2026-11-18T00:35:59.768075+00:00",
+    "origin": "public_source",
+    "raw_snapshot_publication": false
+  }
+]

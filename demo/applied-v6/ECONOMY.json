@@ -1,0 +1,128 @@
+{
+  "all_parameters_synthetic": true,
+  "scenarios": [
+    {
+      "option": "improve",
+      "origin": "synthetic_assumption",
+      "N": 40,
+      "hourly_USD": 25,
+      "setup_USD": 200,
+      "amortization_months": 3,
+      "maintenance_USD": 25,
+      "saved_minutes_scenarios": [
+        -2,
+        2,
+        5
+      ],
+      "monthly_net_USD": [
+        "-125.00",
+        "-58.33",
+        "-8.33"
+      ],
+      "break_even_saved_minutes": "5.50"
+    },
+    {
+      "option": "refocus",
+      "origin": "synthetic_assumption",
+      "N": 20,
+      "hourly_USD": 25,
+      "setup_USD": 50,
+      "amortization_months": 3,
+      "maintenance_USD": 10,
+      "saved_minutes_scenarios": [
+        -1,
+        2,
+        4
+      ],
+      "monthly_net_USD": [
+        "-35.00",
+        "-10.00",
+        "6.67"
+      ],
+      "break_even_saved_minutes": "3.20"
+    }
+  ],
+  "independent_oracle": [
+    {
+      "option": "improve",
+      "minutes": -2,
+      "net_USD": "-125.00"
+    },
+    {
+      "option": "improve",
+      "minutes": 2,
+      "net_USD": "-58.33"
+    },
+    {
+      "option": "improve",
+      "minutes": 5,
+      "net_USD": "-8.33"
+    },
+    {
+      "option": "refocus",
+      "minutes": -1,
+      "net_USD": "-35.00"
+    },
+    {
+      "option": "refocus",
+      "minutes": 2,
+      "net_USD": "-10.00"
+    },
+    {
+      "option": "refocus",
+      "minutes": 4,
+      "net_USD": "6.67"
+    }
+  ],
+  "sensitivity_N80_saved2_net_USD": "40.00000000000000000000000000",
+  "scoring": [
+    {
+      "weights": {
+        "privacy": 0.4,
+        "reversibility": 0.3,
+        "value": 0.3
+      },
+      "totals": {
+        "OPT-001": "2.7",
+        "OPT-002": "2.3",
+        "OPT-003": "3.4",
+        "OPT-004": "1.9"
+      },
+      "leaders": [
+        "OPT-003"
+      ]
+    },
+    {
+      "weights": {
+        "privacy": 0.5,
+        "reversibility": 0.3,
+        "value": 0.2
+      },
+      "totals": {
+        "OPT-001": "2.9",
+        "OPT-002": "2.2",
+        "OPT-003": "3.6",
+        "OPT-004": "2.3"
+      },
+      "leaders": [
+        "OPT-003"
+      ]
+    },
+    {
+      "weights": {
+        "privacy": 0.2,
+        "reversibility": 0.3,
+        "value": 0.5
+      },
+      "totals": {
+        "OPT-001": "2.3",
+        "OPT-002": "2.5",
+        "OPT-003": "3.0",
+        "OPT-004": "1.1"
+      },
+      "leaders": [
+        "OPT-003"
+      ]
+    }
+  ]
+}

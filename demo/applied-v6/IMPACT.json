@@ -1,0 +1,125 @@
+{
+  "new_vendor_condition": {
+    "case_revision": 61,
+    "data": {
+      "start_ref": {
+        "case_id": "test-applied-meeting",
+        "entity_id": "CLM-004",
+        "revision": 1
+      },
+      "affected": [
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "ART-019",
+            "revision": 1
+          },
+          "kind": "artifact",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        },
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "ART-020",
+            "revision": 1
+          },
+          "kind": "artifact",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        },
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "OPT-001",
+            "revision": 2
+          },
+          "kind": "option",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        },
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "OPT-002",
+            "revision": 2
+          },
+          "kind": "option",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        },
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "OPT-003",
+            "revision": 2
+          },
+          "kind": "option",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        },
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "OPT-004",
+            "revision": 2
+          },
+          "kind": "option",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        },
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "QST-001",
+            "revision": 3
+          },
+          "kind": "question",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        },
+        {
+          "ref": {
+            "case_id": "test-applied-meeting",
+            "entity_id": "RPL-001",
+            "revision": 2
+          },
+          "kind": "research_plan",
+          "effective": {
+            "eligible": true,
+            "reasons": []
+          }
+        }
+      ],
+      "meaning": "Registered dependency closure only; semantic relevance and revised business approval are not inferred",
+      "mutation_performed": false
+    }
+  },
+  "irrelevant_note": {
+    "case_revision": 61,
+    "data": {
+      "start_ref": {
+        "case_id": "test-applied-meeting",
+        "entity_id": "ART-010",
+        "revision": 1
+      },
+      "affected": [],
+      "meaning": "Registered dependency closure only; semantic relevance and revised business approval are not inferred",
+      "mutation_performed": false
+    }
+  }
+}
