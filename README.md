@@ -23,7 +23,8 @@
 - **[Видео MP4, 42 с](https://github.com/DariaPash/ai-project/releases/download/demo-v7/cli-demo.mp4)** ·
   **[Иллюстрированный PDF, 27 стр.](https://github.com/DariaPash/ai-project/releases/download/demo-v7/description-final.pdf)** ·
   **[Комплект ZIP](https://github.com/DariaPash/ai-project/releases/download/demo-v7/telecom-kit-v7.zip)** ·
-  **[Релиз v7](https://github.com/DariaPash/ai-project/releases/tag/demo-v7)**
+  **[Демонстрация для организаторов, 3 мин](https://github.com/DariaPash/ai-project/releases/download/demo-v7/organizer-demo.mp4)** ·
+**[Релиз v7](https://github.com/DariaPash/ai-project/releases/tag/demo-v7)**
 
 Экономика (всё учебное): разрыв года 6 млн ₽ = минимум 12 000 доп. оплаченных
 номеро-месяцев; сценарии 285,0 / 283,5 / 280,2 млн ₽; разрывы и стоп-условия названы.
