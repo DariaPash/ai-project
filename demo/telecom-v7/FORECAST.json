@@ -1,0 +1,57 @@
+{
+  "scenarios": {
+    "favorable": {
+      "groups": 12000,
+      "active": 8000,
+      "activation_pct": 60,
+      "share": "2/3",
+      "extra_paid_number_months": 12000,
+      "revenue_RUB": 6000000,
+      "GP_total_mln_RUB": "285.0",
+      "owners_connected": 1000,
+      "owners_note": "Первая услуга их не меняет: прогноз без изменений, цель 2 000 не достигается этой услугой"
+    },
+    "base": {
+      "groups": 11000,
+      "active": 7300,
+      "activation_pct": 52,
+      "share": "73/110",
+      "extra_paid_number_months": 9000,
+      "revenue_RUB": 4500000,
+      "GP_total_mln_RUB": "283.5",
+      "owners_connected": 1000,
+      "owners_note": "Первая услуга их не меняет: прогноз без изменений, цель 2 000 не достигается этой услугой"
+    },
+    "adverse": {
+      "groups": 9800,
+      "active": 6200,
+      "activation_pct": 47,
+      "share": "31/49",
+      "extra_paid_number_months": 2400,
+      "revenue_RUB": 1200000,
+      "GP_total_mln_RUB": "280.2",
+      "owners_connected": 1000,
+      "owners_note": "Первая услуга их не меняет: прогноз без изменений, цель 2 000 не достигается этой услугой"
+    }
+  },
+  "gaps": {
+    "favorable": "0 млн — цель достигнута",
+    "base": "1,5 млн (3 000 мес) — расширение охвата или удержание; решение руководителя в Q2",
+    "adverse": "4,8 млн — стоп/пересмотр по гейту Q2"
+  },
+  "oracle": {
+    "gap_RUB": 6000000,
+    "rate": 500,
+    "months": {
+      "favorable": 12000,
+      "base": 9000,
+      "adverse": 2400
+    },
+    "GP_by_scenario": {
+      "favorable": "285.0",
+      "base": "283.5",
+      "adverse": "280.2"
+    },
+    "verified_by": "Fraction/Decimal exact arithmetic in live session"
+  }
+}

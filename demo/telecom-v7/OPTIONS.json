@@ -1,0 +1,323 @@
+[
+  {
+    "action_id": "ACT-020",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:56:46.723675+00:00",
+    "created_by": "host_agent",
+    "id": "OPT-001",
+    "kind": "option",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "assumptions": [
+        "База сравнения 279 млн руб. и 8 000 групп из примера брифа остаётся без изменений"
+      ],
+      "audience": "Подключённые семейные группы и владельцы нескольких номеров",
+      "basis_refs": [
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-002",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-003",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-004",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-005",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-006",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-007",
+          "revision": 1
+        }
+      ],
+      "contract_version": 3,
+      "economics_range": "0 доп. оплаченных месяцев; прибыль остаётся 279 млн руб., разрыв 6 млн руб. открыт",
+      "horizon": "Плановый год; ориентир третьего года не задаётся",
+      "job": "Текущее обслуживание продолжается; нового job не добавляется",
+      "mechanism": "Сохранить текущее обслуживание без новых вложений",
+      "minimal_test": "Сравнение фактических показателей планового года с базой без изменений",
+      "option_type": "status_quo",
+      "refusal": "Отказ от инвестиций сейчас; вернуться к рассмотрению при новых данных",
+      "research_plan_ref": {
+        "case_id": "test-telecom-brief",
+        "entity_id": "RPL-002",
+        "revision": 2
+      },
+      "reversibility": "Полная: вернуться к инвестициям можно в любой момент",
+      "risks": [
+        "Отсутствие эффекта может быть скрыто общими колебаниями рынка",
+        "Данные для будущего решения не накапливаются"
+      ],
+      "scores": {
+        "gp_effect": 1,
+        "launch_cost": 4,
+        "pilot_speed": 4,
+        "reach": 1,
+        "risk": 4
+      },
+      "strongest_objection": "Не влияет на разрыв цели: 6 млн руб. остаются открытыми, наблюдение без действия не создаёт данных для решения",
+      "wins_when": "Ни один механизм не даёт проверяемого эффекта за квартал"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-021",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:56:46.820019+00:00",
+    "created_by": "host_agent",
+    "id": "OPT-002",
+    "kind": "option",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "assumptions": [
+        "Доля групп, где доля участника исчерпывается, и окно между исчерпанием и просьбой о помощи неизвестны — измеряются пилотом",
+        "Просмотр остатка — то же действие, которое засчитывает активность группы; сигнал работает на активацию и активность одновременно",
+        "Среднее число платящих номеров в группе и прирост удержания — допущения с порогами в ECONOMY.json"
+      ],
+      "audience": "Организаторы подключённых семейных групп (база 6 500→8 000) и их участники",
+      "basis_refs": [
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-002",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-003",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-004",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-005",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-006",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-007",
+          "revision": 1
+        }
+      ],
+      "contract_version": 3,
+      "economics_range": "От 0 (эффект только в месяц сигнала) до +12 000 доп. оплаченных номеро-месяцев = +6 млн руб.; с новыми расходами C порог (6 млн + C)/500",
+      "horizon": "Плановый год; решение о масштабе — конец Q2",
+      "job": "Организатор узнаёт об исчерпании доли до просьбы о помощи и сразу передаёт объём из свободного остатка",
+      "mechanism": "Своевременный сигнал организатору при исчерпании доли участника + передача объёма одним касанием в существующем приложении",
+      "minimal_test": "Пилот на подключённых группах: предупреждение до исчерпания; метрики — доля активных, предотвращённые ограничения, доп. оплаченные месяцы",
+      "option_type": "improve",
+      "refusal": "Если пилот не покажет прирост доп. оплаченных месяцев — отключить и вернуться к статус-кво",
+      "research_plan_ref": {
+        "case_id": "test-telecom-brief",
+        "entity_id": "RPL-002",
+        "revision": 2
+      },
+      "reversibility": "Высокая: функцию можно отключить без миграций",
+      "risks": [
+        "Ложные предупреждения",
+        "Передача объёма в ущерб другим участникам общего пакета",
+        "Привыкание организатора к сигналу вместо собственной проверки"
+      ],
+      "scores": {
+        "gp_effect": 4,
+        "launch_cost": 4,
+        "pilot_speed": 4,
+        "reach": 4,
+        "risk": 4
+      },
+      "strongest_objection": "Эффект на удержание и число оплаченных месяцев не доказан: 12 000 номеро-месяцев могут не набраться",
+      "wins_when": "Есть окно между исчерпанием доли и просьбой о помощи, сигнал попадает в него и снижает ограничения связи"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-022",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:56:46.926400+00:00",
+    "created_by": "host_agent",
+    "id": "OPT-003",
+    "kind": "option",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "assumptions": [
+        "Поток создания групп планового года неизвестен — сценарии 7 000 и 12 000",
+        "Прирост конверсии каждого шага и связь активации с удержанием измеряются пилотом"
+      ],
+      "audience": "Новые создаваемые группы планового года (~7–12 тыс. по допущению)",
+      "basis_refs": [
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-002",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-003",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-004",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-005",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-006",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-007",
+          "revision": 1
+        }
+      ],
+      "contract_version": 3,
+      "economics_range": "+1 575…+3 600 доп. номеро-месяцев (0,8–1,8 млн руб.; ~18–30% разрыва) при +15 п.п. активации — одного механизма для 6 млн руб. недостаточно",
+      "horizon": "Плановый год; решение о масштабе — конец Q2",
+      "job": "Участник быстрее совершает первое полезное действие, группа активируется в 14-дневное окно",
+      "mechanism": "Активация в 14-дневном окне: упростить приглашение→участие→первое полезное действие, напоминания организатору и участнику",
+      "minimal_test": "Пилот на когортах новых групп: поток создания × конверсия шагов × активация 45→60%; окно измерения — 14 дней",
+      "option_type": "refocus",
+      "refusal": "Если активация не вырастет после упрощения пути — откатить изменения онбординга",
+      "research_plan_ref": {
+        "case_id": "test-telecom-brief",
+        "entity_id": "RPL-002",
+        "revision": 2
+      },
+      "reversibility": "Средняя: изменение онбординга затрагивает все новые группы",
+      "risks": [
+        "Раздражение от напоминаний",
+        "Активация без последующей ежемесячной активности",
+        "Каннибализация внимания к другим функциям приложения"
+      ],
+      "scores": {
+        "gp_effect": 3,
+        "launch_cost": 4,
+        "pilot_speed": 4,
+        "reach": 3,
+        "risk": 4
+      },
+      "strongest_objection": "Охватывает только новые группы; без удержания закрывает лишь ~18–30% разрыва при умеренных допущениях",
+      "wins_when": "Основные потери происходят именно на первых 14 днях, а не в удержании"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-023",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:56:47.040019+00:00",
+    "created_by": "host_agent",
+    "id": "OPT-004",
+    "kind": "option",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "assumptions": [
+        "Остаточные обязательства и поддержка текущего состояния не равны нулю и неизвестны"
+      ],
+      "audience": "Внутренний ресурс команды",
+      "basis_refs": [
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-002",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-003",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-004",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-005",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-006",
+          "revision": 1
+        },
+        {
+          "case_id": "test-telecom-brief",
+          "entity_id": "CLM-007",
+          "revision": 1
+        }
+      ],
+      "contract_version": 3,
+      "economics_range": "0 доп. прибыли от направления; возможные остаточные затраты unknown",
+      "horizon": "Неопределённый; пересмотр при новых данных",
+      "job": "Ресурс команды перенаправляется на другие направления",
+      "mechanism": "Не вкладывать в это направление сейчас; ресурс направить на другие задачи оператора",
+      "minimal_test": "Сопоставление ожидаемого эффекта альтернатив по единой рубрике до перенаправления ресурса",
+      "option_type": "close",
+      "refusal": "Вернуться к направлению при новых данных, изменивших сравнение",
+      "research_plan_ref": {
+        "case_id": "test-telecom-brief",
+        "entity_id": "RPL-002",
+        "revision": 2
+      },
+      "reversibility": "Полная",
+      "risks": [
+        "Остаточные затраты unknown — не считать их нулём без оснований",
+        "Упущенная возможность, если проблема была проверяемо важной"
+      ],
+      "scores": {
+        "gp_effect": 1,
+        "launch_cost": 4,
+        "pilot_speed": 4,
+        "reach": 1,
+        "risk": 4
+      },
+      "strongest_objection": "Цели планового года по группам и активности не достигаются; разрыв 6 млн руб. не устраняется",
+      "wins_when": "Ресурс эффективнее в другом направлении при сопоставимой проверке"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  }
+]

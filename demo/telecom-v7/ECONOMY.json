@@ -1,0 +1,54 @@
+{
+  "at": "2026-11-20T12:56:47.117837+00:00",
+  "all_parameters_educational": true,
+  "gap_RUB": 6000000,
+  "rate_per_extra_paid_number_month_RUB": 500,
+  "min_extra_paid_months_before_new_costs": 12000,
+  "months_needed_with_direct_costs": {
+    "no_new_costs": 12000,
+    "direct_1M": 14000,
+    "direct_2M": 16000
+  },
+  "improve_decompositions_of_12000": {
+    "4000гр×3мес×1ном": 12000,
+    "2000гр×3мес×2ном": 12000,
+    "3000гр×2мес×2ном": 12000
+  },
+  "refocus_scenarios_15pp": {
+    "created7000_k3/2": {
+      "extra_activated": 1050,
+      "months": 1575,
+      "revenue_RUB": 787500
+    },
+    "created7000_k2": {
+      "extra_activated": 1050,
+      "months": 2100,
+      "revenue_RUB": 1050000
+    },
+    "created12000_k3/2": {
+      "extra_activated": 1800,
+      "months": 2700,
+      "revenue_RUB": 1350000
+    },
+    "created12000_k2": {
+      "extra_activated": 1800,
+      "months": 3600,
+      "revenue_RUB": 1800000
+    }
+  },
+  "refocus_share_of_gap": {
+    "created7000_k3/2": "21/160",
+    "created7000_k2": "7/40",
+    "created12000_k3/2": "9/40",
+    "created12000_k2": "3/10"
+  },
+  "shares": {
+    "active_at_target": "2/3",
+    "active_no_change": "5/8",
+    "family_coverage": "3/25",
+    "owner_coverage": "1/20"
+  },
+  "scoring_note": "Шкала контракта 0..4: improve 4.00, refocus 3.50, status_quo/close 2.50; после cap различие pilot_speed сглажено — весовая чувствительность не меняет лидера",
+  "adverse": "Если сигнал не меняет удержание, а активность растёт только в месяц сигнала, доп. оплаченные месяцы ≈ 0 и разрыв не закрывается — решение по гейтам Q1/Q2",
+  "synergy_note": "Просмотр остатка — то же действие, что активность; сигнал работает на активацию и активность одновременно; эффекты не суммируются"
+}

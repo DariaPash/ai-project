@@ -1,0 +1,56 @@
+[
+  {
+    "weights": {
+      "gp_effect": 0.3,
+      "launch_cost": 0.15,
+      "pilot_speed": 0.25,
+      "reach": 0.2,
+      "risk": 0.1
+    },
+    "totals": {
+      "OPT-001": "2.50",
+      "OPT-002": "4.00",
+      "OPT-003": "3.50",
+      "OPT-004": "2.50"
+    },
+    "leaders": [
+      "OPT-002"
+    ]
+  },
+  {
+    "weights": {
+      "gp_effect": 0.45,
+      "launch_cost": 0.1,
+      "pilot_speed": 0.15,
+      "reach": 0.2,
+      "risk": 0.1
+    },
+    "totals": {
+      "OPT-001": "2.05",
+      "OPT-002": "4.00",
+      "OPT-003": "3.35",
+      "OPT-004": "2.05"
+    },
+    "leaders": [
+      "OPT-002"
+    ]
+  },
+  {
+    "weights": {
+      "gp_effect": 0.2,
+      "launch_cost": 0.15,
+      "pilot_speed": 0.4,
+      "reach": 0.15,
+      "risk": 0.1
+    },
+    "totals": {
+      "OPT-001": "2.95",
+      "OPT-002": "4.00",
+      "OPT-003": "3.65",
+      "OPT-004": "2.95"
+    },
+    "leaders": [
+      "OPT-002"
+    ]
+  }
+]

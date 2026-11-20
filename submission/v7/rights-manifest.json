@@ -1,0 +1,18 @@
+{
+  "edition": "v7",
+  "publication_scope": "Standing delegated GitHub-publication authority for owned follow-up materials; contest submission excluded",
+  "included": [
+    "Owned strategy texts/calculations",
+    "Owned event display and capture",
+    "Short verbatim quotes with page locators from the user-supplied example brief"
+  ],
+  "excluded": [
+    "Full example brief PDF",
+    "Private case Store/history",
+    "Human approval evidence artifacts",
+    "Credentials/PII"
+  ],
+  "all_numbers_educational": true,
+  "public_zip_is_case_backup": false,
+  "legal_contest_submission": false
+}

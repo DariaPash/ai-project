@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-20T14:07:06.471794+00:00",
+  "scope": "v7 educational telecom run on unchanged core; contract/research/strategy/review regression",
+  "targeted_pytest": {
+    "passed": 45,
+    "seconds": 30.64695662498707,
+    "exit": 0
+  },
+  "brief_pages": 11,
+  "verbatim_facts": 6,
+  "options": 4,
+  "scoring": "improve 4.00 leads all three weight sets (0..4 scale)",
+  "economy": "gap 6M RUB = 12000 months min; scenarios 285.0/283.5/280.2",
+  "h_lifecycle": {
+    "at": "2026-11-20T14:07:06.471455+00:00",
+    "h1_option_choice": {
+      "question": "improve / refocus / status_quo / close",
+      "answer": "improve",
+      "actor": "Product user (owner)",
+      "channel": "Interactive question in working session",
+      "interpretation": "Real direction choice; not final approval"
+    },
+    "h2_final_decision": {
+      "question": "Approve final bundle (strategies+experiment+DEC+document)",
+      "answer": "Approve",
+      "actor": "Product user (owner)",
+      "channel": "Interactive question in working session",
+      "interpretation": "Educational bundle approval; no real-operator rollout, no contest submission"
+    },
+    "fixture_approvals": "none used",
+    "agent_never_approved_for_human": true
+  },
+  "video": {
+    "seconds": 41.72,
+    "full_decode": true,
+    "capture": "Actual FIFO monitor, decision session; broken sessions preserved as evidence",
+    "final_confirmation_segment": "committed in Store without monitor, labelled"
+  },
+  "pdf": {
+    "pages": 27,
+    "images": 4,
+    "body_words_in_order": 1713,
+    "footer_correct_all_pages": true,
+    "all_pages_rasterized": true,
+    "visual_model_inspection": "unavailable: current host has no image input; recorded as limitation"
+  },
+  "accounting": "GLM host: previous-profile token telemetry unavailable (BUDGET_MODEL); actual debit unknown; $400 ceiling as guard",
+  "benchmark": false,
+  "new_independent_review": false,
+  "real_market_demand_or_effect": false,
+  "full_F01_F15": false,
+  "known_issues": [
+    "One junk immutable ART (a sha string) created by a script line error; unused by any payload",
+    "Four capture sessions; three ended early on tooling errors, preserved"
+  ]
+}

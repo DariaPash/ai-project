@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-20T14:07:06.471455+00:00",
+  "h1_option_choice": {
+    "question": "improve / refocus / status_quo / close",
+    "answer": "improve",
+    "actor": "Product user (owner)",
+    "channel": "Interactive question in working session",
+    "interpretation": "Real direction choice; not final approval"
+  },
+  "h2_final_decision": {
+    "question": "Approve final bundle (strategies+experiment+DEC+document)",
+    "answer": "Approve",
+    "actor": "Product user (owner)",
+    "channel": "Interactive question in working session",
+    "interpretation": "Educational bundle approval; no real-operator rollout, no contest submission"
+  },
+  "fixture_approvals": "none used",
+  "agent_never_approved_for_human": true
+}

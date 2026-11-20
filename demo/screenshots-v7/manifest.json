@@ -1,0 +1,48 @@
+{
+  "actual_captured_pixels": true,
+  "slides": false,
+  "origin": "Actual FIFO monitor of current-host tool events (telecom v7 decision session); not IDE desktop, not independent model",
+  "video_sha256": "1d5d14030d8c7313812957db81d0c9949a5850dd9681432e84c3497cfd80b9ad",
+  "crops": {
+    "bundle": {
+      "file": "bundle.png",
+      "sha256": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+      "source_frame": "00016.png",
+      "time_s": 41.665,
+      "matched_needles": [
+        "связываю bundle",
+        "контракт"
+      ]
+    },
+    "strategies": {
+      "file": "strategies.png",
+      "sha256": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+      "source_frame": "00016.png",
+      "time_s": 41.665,
+      "matched_needles": [
+        "стратеги",
+        "lineage"
+      ]
+    },
+    "decision": {
+      "file": "decision.png",
+      "sha256": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+      "source_frame": "00016.png",
+      "time_s": 41.665,
+      "matched_needles": [
+        "DEC",
+        "решение"
+      ]
+    },
+    "resume": {
+      "file": "resume.png",
+      "sha256": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+      "source_frame": "00016.png",
+      "time_s": 41.665,
+      "matched_needles": [
+        "новый процесс",
+        "checkpoint"
+      ]
+    }
+  }
+}

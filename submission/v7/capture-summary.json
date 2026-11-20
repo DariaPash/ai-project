@@ -1,0 +1,30 @@
+{
+  "edition": "v7",
+  "case_id": "test-telecom-brief",
+  "checkpoint_at_capture_end": 57,
+  "capture": "Actual FIFO display of current-host/tool events (decision session 41.72s); not IDE desktop or isolated model",
+  "prepared_before_recording": "Ingest of 11-page brief, 6 facts, plan, 4 options, economy, real option_choice approve",
+  "broken_sessions_preserved": [
+    "full-story-v7",
+    "full-story-v7-live",
+    "full-story-v7-final",
+    "full-story-v7-main",
+    "full-story-v7-confirm"
+  ],
+  "final_confirmation_segment": "Recorded in Store without live monitor; labelled in README/PDF",
+  "real_h": {
+    "option_choice": true,
+    "final_decision": true
+  },
+  "new_independent_review": false,
+  "full_video_decode": true,
+  "pdf": {
+    "pages": 27,
+    "images": 4,
+    "body_words": 1713,
+    "all_words_in_order": true,
+    "footer_all_pages_correct": true,
+    "sha256": "3a08201d00aeb745ebff6999b6b30bf8bd7094f9e1c33a6a1df250b3299622aa"
+  },
+  "pdf_all_pages_rasterized": true
+}

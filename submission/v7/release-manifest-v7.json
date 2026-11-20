@@ -1,0 +1,63 @@
+{
+  "at": "2026-11-20T14:07:06.519694+00:00",
+  "edition": "v7",
+  "scope": "Owned educational telecom analysis with two real human gates; unchanged core",
+  "base_commit": "0ac80f08bb81f9460561b95956a2f1980bca6acc",
+  "assets": {
+    "cli-demo.mp4": {
+      "sha256": "1d5d14030d8c7313812957db81d0c9949a5850dd9681432e84c3497cfd80b9ad",
+      "bytes": 755783
+    },
+    "description-final.pdf": {
+      "sha256": "3a08201d00aeb745ebff6999b6b30bf8bd7094f9e1c33a6a1df250b3299622aa",
+      "bytes": 317395
+    },
+    "telecom-kit-v7.zip": {
+      "sha256": "f196c5999af8fd9b687f20e55e0cf5faf9ff26336734c7b5a75989488bb0969d",
+      "bytes": 1544862
+    }
+  },
+  "files": {
+    "demo/telecom-v7/README-V7.md": "35466b3fc1a1ed486193b6f4d39df964a74013df97b6dbe977013cdcdb3ebcfb",
+    "demo/telecom-v7/STRATEGY-DOCUMENT.md": "04f4d91dcb9e9e5ab2f578fa251fd53cd5b268e7f27701e73f7809d5a2caa435",
+    "demo/telecom-v7/PRODUCT-STRATEGY.md": "cb7a0ac22ca25efb442e637c64faf7ae436acd73857481bdfe880b33906942d4",
+    "demo/telecom-v7/COMMUNICATION-STRATEGY.md": "b75cc8f9b556e3d51ea6253971faffd193992eb2ddb81d1c89a3d8f90e094d3a",
+    "demo/telecom-v7/FORECAST.json": "32a290708092212ac13d88e99f6c691a42df779940a96b637f2a54001fc8fed2",
+    "demo/telecom-v7/ECONOMY.json": "98d11adc1c3b80a545d28a0de69d136fc883a0c129b4e7173b2a7518b02fea1b",
+    "demo/telecom-v7/OPTIONS.json": "11a6a1e73705931d75799296b1a3f9276b1001f1f7815addbd6a16988f9485f6",
+    "demo/telecom-v7/SCORING.json": "5b654c129d8a388fe7be90c983497203834c53d1d93814ca342d8eedbd70592f",
+    "demo/telecom-v7/CLAIMS.json": "0694d09aa012a8f53668df2a7cc9cd7614b86b86ff3050db85e806b0b0903416",
+    "demo/telecom-v7/H-LIFECYCLE.json": "5f39667072c2ae70a8fce12fbc92ed02a48f0e4f8fa71fbfb8828f2a884da142",
+    "demo/telecom-v7/TECHNICAL-CHECKS.json": "df2a3c786ab96f302865e96f1a9399c956a3155a4b7f22c1c7f427e38a98a51d",
+    "demo/screenshots-v7/bundle.png": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+    "demo/screenshots-v7/strategies.png": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+    "demo/screenshots-v7/decision.png": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+    "demo/screenshots-v7/resume.png": "f64d84faadc48af7522b19734072544469c27bab762741871dd60c73c79636fe",
+    "demo/screenshots-v7/manifest.json": "8144160b45c0b69f4f2f5c4e9493bfd072e2aff7b278d79f0d5cec43c6cc6448",
+    "submission/v7/cli-demo.mp4": "1d5d14030d8c7313812957db81d0c9949a5850dd9681432e84c3497cfd80b9ad",
+    "submission/v7/description-final.pdf": "3a08201d00aeb745ebff6999b6b30bf8bd7094f9e1c33a6a1df250b3299622aa",
+    "submission/v7/session.cast": "4d926a85f71fb34f95357f21236c547a8b4b5d812ada1dea7748eeb5f376f37e",
+    "submission/v7/capture-summary.json": "7f8755404ea11e80de09d4006efe7efd8aa841d3655dc01685e102a00cafdb2a",
+    "submission/v7/rights-manifest.json": "8af9f03c3fac000997f306040ab681231b633ae0afc6af70ca345c13db4a8829",
+    "submission/v7/CAPTAIN-HANDOFF.md": "e20c89f37d3bcfffe8f75b7e42e8f990a69e9038e4c14360a04d98e8189d40e4",
+    "submission/v7/telecom-kit-v7.zip": "f196c5999af8fd9b687f20e55e0cf5faf9ff26336734c7b5a75989488bb0969d",
+    "README.md": "15273ac095c55d9cb68a26aa73397d0491634cf5a9c93a4af2f79e86a696872f"
+  },
+  "historical_versions_preserved": [
+    "v3",
+    "v4",
+    "v5",
+    "v6"
+  ],
+  "full_F01_F15_acceptance": false,
+  "official_fit": false,
+  "real_market_demand": false,
+  "submitted": false,
+  "public_case_backup": false,
+  "targeted_tests": 45,
+  "source_mapping": {
+    "demo/telecom-v7/": "submission/telecom-v7/",
+    "demo/screenshots-v7/": "submission/full-story-v7-decision/screenshots/",
+    "description-final.pdf": "submission/full-story-v7-decision/description-final.pdf"
+  }
+}

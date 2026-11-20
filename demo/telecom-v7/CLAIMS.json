@@ -1,0 +1,278 @@
+[
+  {
+    "action_id": "ACT-013",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:52:42.562281+00:00",
+    "created_by": "host_agent",
+    "id": "CLM-002",
+    "kind": "claim",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "basis_refs": [],
+      "counterevidence": [],
+      "evidence": [
+        {
+          "locator": {
+            "coordinates": {
+              "page": 9
+            },
+            "exact_quote": "Начните с 279 млн руб. валовой прибыли при обычном обслуживании. До минимальной \nгодовой цели в 285 млн руб. не хватает 6 млн руб.",
+            "extraction_id": "EXT-001",
+            "kind": "page",
+            "source_hash": "558d2c665caa4f4954135c8bbfb69d791e398dcdc5b625d5ded7bdb2d0eb0fa5",
+            "source_revision": 1
+          },
+          "ref": {
+            "case_id": "test-telecom-brief",
+            "entity_id": "SRC-001",
+            "revision": 1
+          }
+        }
+      ],
+      "limitations": [
+        "Учебное число вымышленного оператора из примера брифа; не рыночные данные"
+      ],
+      "origin": "synthetic_fixture",
+      "status": "supported",
+      "support_review": "Verbatim raw-text quote auto-derived from collapsed-needle match; full PDF retained privately",
+      "support_scope": "technical_fixture",
+      "text": "Плановый год без изменений: валовая прибыль 279 млн руб.; минимальная цель 285 млн руб.; разрыв 6 млн руб.",
+      "type": "fact"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-014",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:52:42.620179+00:00",
+    "created_by": "host_agent",
+    "id": "CLM-003",
+    "kind": "claim",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "basis_refs": [],
+      "counterevidence": [],
+      "evidence": [
+        {
+          "locator": {
+            "coordinates": {
+              "page": 9
+            },
+            "exact_quote": "Общая для команд учебная ставка – 500 руб. валовой \nприбыли за один дополнительный оплаченный месяц одного номера.",
+            "extraction_id": "EXT-001",
+            "kind": "page",
+            "source_hash": "558d2c665caa4f4954135c8bbfb69d791e398dcdc5b625d5ded7bdb2d0eb0fa5",
+            "source_revision": 1
+          },
+          "ref": {
+            "case_id": "test-telecom-brief",
+            "entity_id": "SRC-001",
+            "revision": 1
+          }
+        }
+      ],
+      "limitations": [
+        "Учебное число вымышленного оператора из примера брифа; не рыночные данные"
+      ],
+      "origin": "synthetic_fixture",
+      "status": "supported",
+      "support_review": "Verbatim raw-text quote auto-derived from collapsed-needle match; full PDF retained privately",
+      "support_scope": "technical_fixture",
+      "text": "Общая учебная ставка: 500 руб. валовой прибыли за один дополнительный оплаченный месяц одного номера.",
+      "type": "fact"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-015",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:52:42.683417+00:00",
+    "created_by": "host_agent",
+    "id": "CLM-004",
+    "kind": "claim",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "basis_refs": [],
+      "counterevidence": [],
+      "evidence": [
+        {
+          "locator": {
+            "coordinates": {
+              "page": 3
+            },
+            "exact_quote": "Подключённые семейные группы на",
+            "extraction_id": "EXT-001",
+            "kind": "page",
+            "source_hash": "558d2c665caa4f4954135c8bbfb69d791e398dcdc5b625d5ded7bdb2d0eb0fa5",
+            "source_revision": 1
+          },
+          "ref": {
+            "case_id": "test-telecom-brief",
+            "entity_id": "SRC-001",
+            "revision": 1
+          }
+        }
+      ],
+      "limitations": [
+        "Учебное число вымышленного оператора из примера брифа; не рыночные данные"
+      ],
+      "origin": "synthetic_fixture",
+      "status": "supported",
+      "support_review": "Verbatim raw-text quote auto-derived from collapsed-needle match; full PDF retained privately",
+      "support_scope": "technical_fixture",
+      "text": "Семейные группы планового года: старт 6 500; без изменений 8 000; цель 12 000. Активных за последний месяц: без изменений 5 000; цель 8 000.",
+      "type": "fact"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-016",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:52:42.750282+00:00",
+    "created_by": "host_agent",
+    "id": "CLM-005",
+    "kind": "claim",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "basis_refs": [],
+      "counterevidence": [],
+      "evidence": [
+        {
+          "locator": {
+            "coordinates": {
+              "page": 3
+            },
+            "exact_quote": "В \nзнаменатель входят и группы с приглашениями без ответа.",
+            "extraction_id": "EXT-001",
+            "kind": "page",
+            "source_hash": "558d2c665caa4f4954135c8bbfb69d791e398dcdc5b625d5ded7bdb2d0eb0fa5",
+            "source_revision": 1
+          },
+          "ref": {
+            "case_id": "test-telecom-brief",
+            "entity_id": "SRC-001",
+            "revision": 1
+          }
+        }
+      ],
+      "limitations": [
+        "Учебное число вымышленного оператора из примера брифа; не рыночные данные"
+      ],
+      "origin": "synthetic_fixture",
+      "status": "supported",
+      "support_review": "Verbatim raw-text quote auto-derived from collapsed-needle match; full PDF retained privately",
+      "support_scope": "technical_fixture",
+      "text": "Активация — первое полезное действие за 14 дней; в знаменатель входят и группы с приглашениями без ответа; без изменений 45%, цель 60%.",
+      "type": "fact"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-017",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:52:42.824423+00:00",
+    "created_by": "host_agent",
+    "id": "CLM-006",
+    "kind": "claim",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "basis_refs": [],
+      "counterevidence": [],
+      "evidence": [
+        {
+          "locator": {
+            "coordinates": {
+              "page": 3
+            },
+            "exact_quote": "оператору доступны 100 тыс. домохозяйств и 40 тыс. владельцев",
+            "extraction_id": "EXT-001",
+            "kind": "page",
+            "source_hash": "558d2c665caa4f4954135c8bbfb69d791e398dcdc5b625d5ded7bdb2d0eb0fa5",
+            "source_revision": 1
+          },
+          "ref": {
+            "case_id": "test-telecom-brief",
+            "entity_id": "SRC-001",
+            "revision": 1
+          }
+        }
+      ],
+      "limitations": [
+        "Учебное число вымышленного оператора из примера брифа; не рыночные данные"
+      ],
+      "origin": "synthetic_fixture",
+      "status": "supported",
+      "support_review": "Verbatim raw-text quote auto-derived from collapsed-needle match; full PDF retained privately",
+      "support_scope": "technical_fixture",
+      "text": "Доступные рынки: 100 тыс. домохозяйств и 40 тыс. владельцев нескольких номеров.",
+      "type": "fact"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  },
+  {
+    "action_id": "ACT-018",
+    "case_id": "test-telecom-brief",
+    "created_at": "2026-11-20T12:52:42.900081+00:00",
+    "created_by": "host_agent",
+    "id": "CLM-007",
+    "kind": "claim",
+    "lineage_roots": [
+      "synthetic_fixture"
+    ],
+    "payload": {
+      "basis_refs": [],
+      "counterevidence": [],
+      "evidence": [
+        {
+          "locator": {
+            "coordinates": {
+              "page": 3
+            },
+            "exact_quote": "Все числа учебные.",
+            "extraction_id": "EXT-001",
+            "kind": "page",
+            "source_hash": "558d2c665caa4f4954135c8bbfb69d791e398dcdc5b625d5ded7bdb2d0eb0fa5",
+            "source_revision": 1
+          },
+          "ref": {
+            "case_id": "test-telecom-brief",
+            "entity_id": "SRC-001",
+            "revision": 1
+          }
+        }
+      ],
+      "limitations": [
+        "Учебное число вымышленного оператора из примера брифа; не рыночные данные"
+      ],
+      "origin": "synthetic_fixture",
+      "status": "supported",
+      "support_review": "Verbatim raw-text quote auto-derived from collapsed-needle match; full PDF retained privately",
+      "support_scope": "technical_fixture",
+      "text": "Все числа примера учебные.",
+      "type": "fact"
+    },
+    "previous_revision": null,
+    "revision": 1,
+    "schema_version": 1
+  }
+]
