@@ -6,9 +6,7 @@
   "cases_in_project": [
     "test-telecom-brief",
     "test-telecom-live",
-    "test-demo-video",
-    "test-demo-video2",
-    "test-profil"
+    "test-profil2"
   ],
   "note": "Указатель для агентов (используется AGENTS.md): все кейсы этого проекта и путь CLI"
 }
