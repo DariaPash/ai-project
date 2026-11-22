@@ -1,0 +1,14 @@
+{
+  "run": "planning/evidence/08/run-5c6d7bf32f814aab8fca826fe4c5635e",
+  "project": ".local/telecom-cd61905c92",
+  "case_id": "test-telecom-brief",
+  "scope": "v7 educational telecom strategy run from user-provided example brief; H-gate reserved to user; no benchmark/no invented demand/no legal submission",
+  "cases_in_project": [
+    "test-telecom-brief",
+    "test-telecom-live",
+    "test-demo-video",
+    "test-demo-video2",
+    "test-profil"
+  ],
+  "note": "Указатель для агентов (используется AGENTS.md): все кейсы этого проекта и путь CLI"
+}
